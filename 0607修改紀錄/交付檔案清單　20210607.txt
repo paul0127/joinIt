@@ -1,0 +1,45 @@
+預覽登入
+帳號 guest
+密碼 12345678
+
+//////////////////////////
+
+更新檔案 zip 下載 
+http://2jc.co/20210602/update-ver-3-20210607-1133.zip
+
+//////////////////////////
+
+
+本次更新頁面預覽
+//////////////////////////
+以下頁面依據 0605在一起切版修改意見-Jason回覆.docx 檔案提到的資料進行調整
+http://2jc.co/20210602/index.html
+http://2jc.co/20210602/index-login.html
+http://2jc.co/20210602/language.html
+http://2jc.co/20210602/payment-step1-buttom-fixed.html
+http://2jc.co/20210602/SubscriptionServices.html
+http://2jc.co/20210602/card-detail.html
+http://2jc.co/20210602/card-list.html
+
+http://2jc.co/20210602/member-center-card-pass-20210605.html
+
+
+會員卡 已審核狀態 (修改 3d翻面卡片特效的圖片 HTML調整 )
+http://2jc.co/20210602/member-center-card-pass-20210605.html
+ 
+////////////////////
+
+本次更新檔案
+//////////////////////////
+index.html
+index-login.html
+language.html
+payment-step1-buttom-fixed.html
+SubscriptionServices.html
+card-detail.html
+card-list.html
+member-center-card-pass-20210605.html
+
+css/style.css
+img/icon_log_bule.svg
+img/icon_log_yellow.svg

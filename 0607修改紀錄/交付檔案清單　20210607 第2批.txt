@@ -1,0 +1,18 @@
+
+本次更新頁面預覽
+//////////////////////////
+訂購頁 （新增 * 與 必填欄位的提示, 將浮動視窗的高度限制取消）
+http://2jc.co/20210602/payment-step1-buttom-fixed.html
+
+卡片列表頁面 （修改進入詳細頁面的連結區塊範圍 + 獨立出  我的最愛按鈕）
+http://2jc.co/20210602/card-list.html
+
+ 
+////////////////////
+
+本次更新檔案
+//////////////////////////
+payment-step1-buttom-fixed.html
+card-list.html
+
+css/style.css

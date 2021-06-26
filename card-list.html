@@ -1,0 +1,614 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-tw" />
+<title>Join it</title>
+<!--bootstrap 4.6 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
+<!-- 手機側邊選單 -->
+<link href="css/bootstrap-better-nav.css" rel="stylesheet" type="text/css">
+<!-- 圖示字形引入 F.A.5.51-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link href="css/bootstrap-popover-x.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-light">
+<!-- Page Heade NAV -->
+<div class="d-flex flex-md-row align-items-center p-3 px-md-4 bg-joinit-header border-bottom box-shadow fixed-top">
+  <div class="container">
+    <div class="row justify-content-between ">
+      <div class="col-2"><a class="navbar-brand" href="#"><img src="img/header_logo@2x.png" class="nav-logo"></a> </div>
+      <!-- 登入後 PC版  NAV的選單  -->
+      <div class="col-6 d-none d-lg-block d-xs-none">
+        <div class="input-group ">
+          <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control" data-toggle="popover-x" data-target="#navsearch" data-placement="bottom">
+          <span class="input-group-btn">
+          <button class="btn" data-dismiss="popover-x"><img src="img/icon_search-2.svg" class="nav-search-icon"  > </button>
+          </span></div>
+        <!-- PC 版本 NAV 搜尋功能的彈跳推薦選項  -->
+        <div id="navsearch" class="popover popover-x popover-default homePopover-box">
+          <div class="arrow"></div>
+          <div class="popover-body popover-content">
+            <h4> 熱門目的地 </h4>
+            <ul class="popover-ul">
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">高雄1</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台南</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">南投</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台北</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">香港</button>
+              </li>
+            </ul>
+            <button class="btn btn-sm btn-primary pull-right m-3 homePopover-btn" data-dismiss="popover-x"> 送出 </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 "> 
+        <!-- 手機側邊選單 -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-nav-joinit">
+          <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <button class="navbar-toggler navbar-toggler-cart" type="button" data-toggle="collapse" data-target="#navbarSupportedContent4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img src="img/icon_cart-2-w.svg" class="cart-icon"></button>
+          <button class="navbar-toggler navbar-toggler-search" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <img class="search-icon" src="img/icon_search-2-w.svg"> </button>
+          
+          <!--  --> 
+          
+          <!-- PC NAV  選項 -->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent3">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item  d-lg-block d-md-block d-sm-none"> <a class="nav-link lan-select" href="#">ENG</a> </li>
+              <!--
+                  <li class="nav-item"> <a class="nav-link" href="#" data-toggle="modal" data-target="#login" ><img src="img/icon_log.svg" class="navbar-img-svg"> 登入/註冊</a> </li>
+                   -->
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" data-toggle="popover-x" data-target="#nav-cart" data-placement="bottom"><img src="img/icon_cart.svg" class="navbar-img-svg"> 購物車 </a> </li>
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" ><img src="img/face.jpg"  class="navbar-img-account"></a> </li>
+              <!--  手機側邊主選單 選項 -->
+              <div class="d-lg-none d-md-block d-sm-block navbarSupportedContent3  ">
+                <ul class="list-unstyled ">
+                  <li class="singin-sidebar-item " ><img src="img/face.jpg"  class="face"> <span class="name">Lee</span></li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_cart_m1"></span>購物車</li>
+                  <li class="singin-sidebar-item active" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_card_m1"></span>我的會員卡禮遇</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_profile_m1"></span>會員資料維護</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_add_m1"></span>常用旅客</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_point_m1"></span>我的點數</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_coupon_m1"></span>折扣券</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_order_m1"></span>訂單管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_msg_m1"></span>訊息管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_like_m1"></span>我的收藏</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_qrcode_m1"></span>產生QRcode</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_fb_m1"></span>分享推薦碼到FB</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_line_m1"></span>分享推薦碼到Line</li>
+                  <li class="singin-sidebar-item singout " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_logout_m1 "></span>登出</li>
+                  <li class="singin-sidebar-item singout" onClick="javascript:location.href='http://www.google.com'"> <span class="eng">ENG</span></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!--未定搞 --> <!-- PC 版本購物車小工具功能的彈跳推薦選項  -->
+          <div id="nav-cart" class="popover popover-x popover-default homePopover-box">
+            <div class="arrow"></div>
+            <div class="popover-body popover-content">
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="border-top w-100">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                      <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <!--手機版的側邊搜尋功能  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent2">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent2" >
+                <div class="input-group navsearch-input " style="padding: 0">
+                  <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control " >
+                  <span class="input-group-btn">
+                  <button class="btn"><img src="img/icon_search-2.svg" class="nav-search-icon"  data-toggle="popover-x" data-target="#homePopover" data-placement="bottom"> </button>
+                  </span></div>
+                <ul class="popover-ul py-3">
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">高雄</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台南</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">南投</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台北</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">香港</button>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!-- 手機版本側邊購物車清單  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent4">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent4" >
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="border-top w-100">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                        <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </div>
+          
+          <!--  --> 
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 麵包屑位置引導 -->
+<div class="container ">
+  <nav >
+    <ol class="breadcrumb joinit-breadcrumb">
+      <li class="breadcrumb-item"><a href="#">首頁</a></li>
+      <li class="breadcrumb-item active" aria-current="page">會員卡</li>
+    </ol>
+  </nav>
+</div>
+<!-- --> 
+
+<!-- 主內容 -->
+<main role="main" class="container">
+  <div class="row">
+  <aside class="col-lg-3 col-sm-12 blog-sidebar ">
+    <h4><strong>搜尋結果"<span class="joinit-font">會員卡</span>"</strong></h4>
+    <div class="p-3 mb-3 bg-light rounded bg-white">
+      <p class="mb-3 border-bottom"> <strong>篩選商品類別</strong></p>
+      <div id="accordion" class="cardlist-accordion"> 
+        
+        <!--可展開的篩選商品勾選類別  台灣區 -->
+        
+        <div class="accordion text-left mb-2" id="accordionCardlistTaiwan">
+          <button type="button" class="btn btn-block btn-nooutline text-left border-bottom collapse-header " data-toggle="collapse" data-target="#collapseTaiwan">
+          <div class="custom-control custom-checkbox custom-control-input-joinit">
+          <input type="checkbox" class="custom-control-input" id="1-0">
+          <label class="custom-control-label" for="1-0">台灣</label>
+          <i class="fa fa-plus pull-right"></i> </div>
+        </button>
+        <div id="collapseTaiwan" class="collapse" aria-labelledby="headingOne" data-parent="#collapseTaiwan">
+          <div class="custom-control custom-checkbox ml-3 mt-3  border-bottom">
+            <input type="checkbox" class="custom-control-input" id="1-1">
+            <label class="custom-control-label" for="1-1">台北</label>
+          </div>
+          <div class="custom-control custom-checkbox ml-3 mt-3  border-bottom">
+            <input type="checkbox" class="custom-control-input" id="1-2">
+            <label class="custom-control-label" for="1-2">台中</label>
+          </div>
+        </div>
+      </div>
+      
+      <!--可展開的篩選商品勾選類別  日本區  -->
+      
+      <div class="accordion text-left mb-2" id="accordionCardlistJapan">
+        <button type="button" class="btn btn-block btn-nooutline text-left border-bottom collapse-header " data-toggle="collapse" data-target="#collapseJapan">
+        <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="2-0">
+        <label class="custom-control-label" for="2-0">日本</label>
+        <i class="fa fa-plus pull-right"></i> </div>
+      </button>
+      <div id="collapseJapan" class="collapse" aria-labelledby="headingOne" data-parent="#collapseJapan">
+        <div class="custom-control custom-checkbox ml-3 mt-3">
+          <input type="checkbox" class="custom-control-input" id="2-1">
+          <label class="custom-control-label" for="2-1">東京</label>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- 價格設定 -->
+    <div class="p-3 mb-3 rounded bg-white">
+      <p class="mb-3"> <strong>價錢</strong></p>
+      <div class="input_with_appended_unit border"> <!-- 20210606 修改單位名稱　--><span class="ml-1" >TWD</span>
+        <input type="text" class="border-0" placeholder="500"  >
+      </div>
+      <div class="text-center"><img src="img/09de656c-93e4-4c5a-808d-f5081f1c917c.png" height="20px" width="20px" class="mt-1 mb-1" ></div>
+      <div class="input_with_appended_unit border"><!-- 20210606 修改單位名稱　--> <span class="ml-1" >TWD</span>
+        <input type="text" class="border-0 " placeholder="500000"  >
+      </div>
+    </div>
+  </aside>
+  <div class="col-lg-9 col-sm-12 "> 
+    <!-- 搜尋統計 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <p> <span class="card-dash-board-text-color-1 card-dash-board-number"> 10 </span> 項推薦行程</p>
+      </div>
+    </div>
+    <!-- 搜尋選項 -->
+    <div class="row">
+      <div class="col-lg-4 sm-12">
+        <button class="mt-3 btn cardlist-top-btn btn-block btn-sm active">熱門程度</button>
+      </div>
+      <div class="col-lg-4 sm-12">
+        <button class="mt-3 btn cardlist-top-btn btn-block btn-sm">評價由高至低</button>
+      </div>
+      <div class="col-lg-4 sm-12">
+        <button class="mt-3 btn cardlist-top-btn btn-block btn-sm">價格：低到高</button>
+      </div>
+    </div>
+    
+    <!-- 搜尋結果 -->
+	    <!-- 20210607 修改 整個div為連結感應區塊, 且將我的最愛按鈕獨立出來-->
+    <div class="card p-3 mt-3 mb-3">
+		<button class="mywish-active mr-2 mt-3 pull-right" onClick="javascript:location.href='http://www.google.com'"></button>
+      <div class="row" onClick="javascript:location.href='card-detail.html'" style="cursor:pointer;">
+        <div class="col-sm-6 text-left">
+          <div class="cardlist-box p-5"><img src="img/2x/card_taiwan_front@2x.png" class="img-fluid "></div>
+        </div>
+        <div class="col-sm-6 text-left">
+          <div class="row">
+            <div class="col-sm-12 text-left">
+              <h4 class="mt-3" >台灣卡</h4>
+					<!--20210607 移除原有 我的最愛按鈕往前 -->
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left gray-color"> <i class="fa fa-map-marker mr-1"></i> 台灣
+              <hr class="mt-0	">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left ">
+              <p>台灣卡 / 特色 【據點最多】◇任你挑隨你選！一卡即可住遍200家以上飯店旅館！ 【價格最優】◇團體特惠價。持卡訂房，即享旅行社、遊覽車團體價！...</p>
+            </div>
+          </div>
+          <div class="row">
+			 <div class="col-4 text-left ">
+              <p class="align-baseline mt-5"><span class="card-dash-board-title align-baseline">4.5</span><img src="img/icon_star2.svg" class="star-icon align-baseline"><span class="home-card-info-price-small mr-2 align-baseline">(2300)</span></p>
+            </div>
+            <div class="col-8 text-right ">
+				 <p class="card-dash-board-number align-baseline"><span class="originalz originalz-big">TWD 3,000</span><br> TWD <span class="card-dash-board-number joinit-font">599</span> <span class="sub-text">起</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  --> 
+    
+    <!-- 搜尋結果 -->
+	    <!-- 20210607 修改 整個div為連結感應區塊, 且將我的最愛按鈕獨立出來-->
+    <div class="card p-3 mt-3 mb-3">
+		<button class="mywish mr-2 mt-3 pull-right" onClick="javascript:location.href='http://www.google.com'"></button>
+      <div class="row" onClick="javascript:location.href='card-detail.html'" style="cursor:pointer;">
+        <div class="col-sm-6 text-left">
+          <div class="cardlist-box p-5"><img src="img/2x/card_asia_front@2x.png" class="img-fluid "></div>
+        </div>
+        <div class="col-sm-6 text-left">
+          <div class="row">
+            <div class="col-sm-12 text-left">
+              <h4 class="mt-3" >亞洲卡</h4>
+             	<!--20210607 移除原有 我的最愛按鈕往前 --> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left gray-color"> <i class="fa fa-map-marker mr-1"></i> 亞洲
+              <hr class="mt-0	">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left ">
+              <p>亞洲卡 / 特色 【據點最多】◇任你挑隨你選！一卡即可住遍200家以上飯店旅館！ 【價格最優】◇團體特惠價。持卡訂房，即享旅行社、遊覽車團體價！...</p>
+            </div>
+          </div>
+          <div class="row">
+			<div class="col-4 text-left ">
+              <p class="align-baseline mt-5"><span class="card-dash-board-title align-baseline">4.5</span><img src="img/icon_star2.svg" class="star-icon align-baseline"><span class="home-card-info-price-small mr-2 align-baseline">(2300)</span></p>
+            </div>
+            <div class="col-8 text-right ">
+              <p class="card-dash-board-number align-baseline"><span class="originalz originalz-big">TWD 3,000</span><br> TWD <span class="card-dash-board-number joinit-font">1,299</span> <span class="sub-text">起</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  --> 
+    
+    <!-- 搜尋結果 -->
+	  <!-- 20210607 修改 整個div為連結感應區塊, 且將我的最愛按鈕獨立出來-->
+   <div class="card p-3 mt-3 mb-3">
+		<button class="mywish mr-2 mt-3 pull-right" onClick="javascript:location.href='http://www.google.com'"></button>
+      <div class="row" onClick="javascript:location.href='card-detail.html'" style="cursor:pointer;">
+        <div class="col-sm-6 text-left">
+          <div class="cardlist-box p-5"><img src="img/2x/card_global_front@2x.png" class="img-fluid "></div>
+        </div>
+        <div class="col-sm-6 text-left">
+          <div class="row">
+            <div class="col-sm-12 text-left">
+              <h4 class="mt-3" >環球卡</h4>
+				<!--20210607 移除原有 我的最愛按鈕往前 -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left gray-color"> <i class="fa fa-map-marker mr-1"></i> 全球
+              <hr class="mt-0	">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left ">
+              <p>環球卡 / 特色 【據點最多】◇任你挑隨你選！一卡即可住遍200家以上飯店旅館！ 【價格最優】◇團體特惠價。持卡訂房，即享旅行社、遊覽車團體價！...</p>
+            </div>
+          </div>
+          <div class="row">
+	        <div class="col-4 text-left ">
+              <p class="align-baseline mt-5"><span class="card-dash-board-title align-baseline">4.5</span><img src="img/icon_star2.svg" class="star-icon align-baseline"><span class="home-card-info-price-small mr-2 align-baseline">(2300)</span></p>
+            </div>
+            <div class="col-8 text-right ">
+              <p class="card-dash-board-number align-baseline"><span class="originalz originalz-big">TWD 3,000</span><br> TWD <span class="card-dash-board-number joinit-font">1,688</span> <span class="sub-text">起</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  --> 
+    
+    <!-- 搜尋結果 -->
+	    <!-- 20210607 修改 整個div為連結感應區塊, 且將我的最愛按鈕獨立出來-->
+    <div class="card p-3 mt-3 mb-3">
+		<button class="mywish mr-2 mt-3 pull-right" onClick="javascript:location.href='http://www.google.com'"></button>
+      <div class="row" onClick="javascript:location.href='card-detail.html'" style="cursor:pointer;">
+        <div class="col-sm-6 text-left">
+          <div class="cardlist-box p-5"><img src="img/2x/card_vip_front@2x.png" class="img-fluid "></div>
+        </div>
+        <div class="col-sm-6 text-left">
+          <div class="row">
+            <div class="col-sm-12 text-left">
+              <h4 class="mt-3" >VIP卡</h4>
+					<!--20210607 移除原有 我的最愛按鈕往前 -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left gray-color"> <i class="fa fa-map-marker mr-1"></i> 全球
+              <hr class="mt-0	">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-left ">
+              <p>VIP卡 / 特色 【據點最多】◇任你挑隨你選！一卡即可住遍200家以上飯店旅館！ 【價格最優】◇團體特惠價。持卡訂房，即享旅行社、遊覽車團體價！...</p>
+            </div>
+          </div>
+          <div class="row">
+			<div class="col-4 text-left ">
+              <p class="align-baseline mt-5 "><span class="card-dash-board-title align-baseline">4.5</span><img src="img/icon_star2.svg" class="star-icon align-baseline"><span class="home-card-info-price-small mr-2 align-baseline">(2300)</span></p>
+            </div>
+            <div class="col-8 text-right ">
+              <p class="card-dash-board-number align-baseline"><span class="originalz originalz-big">TWD 3,000</span><br> TWD <span class="card-dash-board-number joinit-font">99,999</span> <span class="sub-text">起</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  --> 
+    <!-- 分頁 -->
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <ul class="cardlist-pagination mt-5 mb-5">
+          <li><a href="#" class="active">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+<!-- Footer 頁底版型 -->
+<footer class="bd-footer bg-jonit py-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 col-xs-12"> <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap"> <img src="img/footer_logo@2x.png"  class="footr-logo"> </a>
+        <ul class="company-info">
+          <li class="mb-2">在一起管顧科技股份有限公司 </li>
+          <li class="mb-2">地址 高雄市苓雅區新光路38號32樓之3B</li>
+          <li class="mb-2">連絡電話 07-2691686</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-xs-12">
+        <div class="row justify-content-around">
+          <div class=" col-lg-4 col-xs-12">
+            <h5 class="footer-h5">認識在一起</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">關於我們</a></li>
+              <li class="mb-2"><a href="#">品牌故事</a></li>
+              <li class="mb-2"><a href="#">官方部落格</a></li>
+              <li class="mb-2"><a href="#">媒體報導</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">給旅客</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">特點</a></li>
+              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="#">回饋購物金</a></li>
+              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="#">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="#">使用者條款</a></li>
+              <li class="mb-2"><a href="#">常見問題</a></li>
+              <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">在一起合作夥伴</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">成為供應商</a></li>
+              <li class="mb-2"><a href="#">同業合作</a></li>
+              <li class="mb-2"><a href="#">聯盟行銷</a></li>
+              <li class="mb-2"><a href="#">人才招募</a></li>
+              <li class="mb-2"><a href="#">團體客製規劃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-copyright">COPYRIGHT © 2021 Joinit All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-better-nav.min.js"></script> 
+<script>
+        $(document).ready(function () {//手機選單js
+ $('.dropdown-toggle').dropdown();
+        });
+    </script> 
+<!-- bootstrap 常用模組 js 引入--> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- bootstrap 常用彈出模組 js 引入 --> 
+<script type="text/javascript" src="js/popper.min.js"></script> <script type="text/javascript" src="js/bootstrap-popover-x.js"></script> 
+
+<!-- 可展開勾選功能js --> 
+<script>
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".collapse-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".collapse-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".collapse-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+</script>
+</body>
+</html>

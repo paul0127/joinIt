@@ -1,0 +1,45 @@
+預覽登入
+帳號 guest
+密碼 12345678
+
+//////////////////////////
+
+更新檔案 zip 下載 
+http://2jc.co/20210602/update-ver-3-20210604-1115.zip
+
+//////////////////////////
+
+
+本次更新頁面
+//////////////////////////
+
+聯絡我們 (本次新增頁面 )
+http://2jc.co/20210602/contactus.html
+ 
+訂閱服務說明 （修改上方的 聯絡我們 連結）
+http://2jc.co/20210602/SubscriptionServices.html
+
+***注意 所有頁面底下的 Footer 區塊中 聯絡我們 的連結請一起更換,
+但因為避免增加版本控制的複雜, 這部份就不另外提供 html 請工程師協助更新即可！
+
+
+////////////////////
+
+本次更新檔案
+//////////////////////////
+contactus.html
+SubscriptionServices.html
+
+
+css/style.css
+
+img/homebanner/contactusr@2x-100
+img/icon_fb_m1.svg
+img/icon_fb_m1.svg
+img/icon_line_m1.svg
+img/icon_line_m2.svg
+img/icon_qrcode_m1.svg
+img/icon_qrcode_m2.svg
+img/icon-contact-title.png
+
+

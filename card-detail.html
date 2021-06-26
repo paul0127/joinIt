@@ -1,0 +1,1212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-tw" />
+<title>Join it</title>
+<!--bootstrap 4.6 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
+<!-- 手機側邊選單 -->
+<link href="css/bootstrap-better-nav.css" rel="stylesheet" type="text/css">
+<!-- 圖示字形引入 F.A.5.51-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link href="css/bootstrap-popover-x.css" media="all" rel="stylesheet" type="text/css" />
+
+<!-- Owl Stylesheets -->
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.default.css">
+</head>
+
+<body class="bg-white">
+<!-- Page Heade NAV -->
+<div class="d-flex flex-md-row align-items-center p-3 px-md-4 bg-joinit-header border-bottom box-shadow fixed-top">
+  <div class="container">
+    <div class="row justify-content-between ">
+      <div class="col-2"><a class="navbar-brand" href="#"><img src="img/header_logo@2x.png" class="nav-logo"></a> </div>
+      <!-- 登入後 PC版  NAV的選單  -->
+      <div class="col-6 d-none d-lg-block d-xs-none">
+        <div class="input-group ">
+          <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control" data-toggle="popover-x" data-target="#navsearch" data-placement="bottom">
+          <span class="input-group-btn">
+          <button class="btn" data-dismiss="popover-x"><img src="img/icon_search-2.svg" class="nav-search-icon"  > </button>
+          </span></div>
+        <!-- PC 版本 NAV 搜尋功能的彈跳推薦選項  -->
+        <div id="navsearch" class="popover popover-x popover-default homePopover-box">
+          <div class="arrow"></div>
+          <div class="popover-body popover-content">
+            <h4> 熱門目的地 </h4>
+            <ul class="popover-ul">
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">高雄1</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台南</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">南投</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台北</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">香港</button>
+              </li>
+            </ul>
+            <button class="btn btn-sm btn-primary pull-right m-3 homePopover-btn" data-dismiss="popover-x"> 送出 </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 "> 
+        <!-- 手機側邊選單 -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-nav-joinit">
+          <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <button class="navbar-toggler navbar-toggler-cart" type="button" data-toggle="collapse" data-target="#navbarSupportedContent4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img src="img/icon_cart-2-w.svg" class="cart-icon"></button>
+          <button class="navbar-toggler navbar-toggler-search" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <img class="search-icon" src="img/icon_search-2-w.svg"> </button>
+          
+          <!--  --> 
+          
+          <!-- PC NAV  選項 -->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent3">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item  d-lg-block d-md-block d-sm-none"> <a class="nav-link lan-select" href="#">ENG</a> </li>
+              <!--
+                  <li class="nav-item"> <a class="nav-link" href="#" data-toggle="modal" data-target="#login" ><img src="img/icon_log.svg" class="navbar-img-svg"> 登入/註冊</a> </li>
+                   -->
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" data-toggle="popover-x" data-target="#nav-cart" data-placement="bottom"><img src="img/icon_cart.svg" class="navbar-img-svg"> 購物車 </a> </li>
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" ><img src="img/face.jpg"  class="navbar-img-account"></a> </li>
+              <!--  手機側邊主選單 選項 -->
+              <div class="d-lg-none d-md-block d-sm-block navbarSupportedContent3  ">
+                <ul class="list-unstyled ">
+                  <li class="singin-sidebar-item " ><img src="img/face.jpg"  class="face"> <span class="name">Lee</span></li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_cart_m1"></span>購物車</li>
+                  <li class="singin-sidebar-item active" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_card_m1"></span>我的會員卡禮遇</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_profile_m1"></span>會員資料維護</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_add_m1"></span>常用旅客</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_point_m1"></span>我的點數</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_coupon_m1"></span>折扣券</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_order_m1"></span>訂單管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_msg_m1"></span>訊息管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_like_m1"></span>我的收藏</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_qrcode_m1"></span>產生QRcode</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_fb_m1"></span>分享推薦碼到FB</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_line_m1"></span>分享推薦碼到Line</li>
+                  <li class="singin-sidebar-item singout " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_logout_m1 "></span>登出</li>
+                  <li class="singin-sidebar-item singout" onClick="javascript:location.href='http://www.google.com'"> <span class="eng">ENG</span></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!--未定搞 --> <!-- PC 版本購物車小工具功能的彈跳推薦選項  -->
+          <div id="nav-cart" class="popover popover-x popover-default homePopover-box">
+            <div class="arrow"></div>
+            <div class="popover-body popover-content">
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="border-top w-100">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                      <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <!--手機版的側邊搜尋功能  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent2">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent2" >
+                <div class="input-group navsearch-input " style="padding: 0">
+                  <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control " >
+                  <span class="input-group-btn">
+                  <button class="btn"><img src="img/icon_search-2.svg" class="nav-search-icon"  data-toggle="popover-x" data-target="#homePopover" data-placement="bottom"> </button>
+                  </span></div>
+                <ul class="popover-ul py-3">
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">高雄</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台南</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">南投</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台北</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">香港</button>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!-- 手機版本側邊購物車清單  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent4">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent4" >
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="border-top w-100">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                        <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </div>
+          
+          <!--  --> 
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 麵包屑位置引導 -->
+<div class="container ">
+  <nav >
+    <ol class="breadcrumb joinit-breadcrumb">
+      <li class="breadcrumb-item"><a href="#">首頁</a></li>
+      <li class="breadcrumb-item"><a href="#">台灣</a></li>
+      <li class="breadcrumb-item"><a href="#">台北</a></li>
+      <li class="breadcrumb-item active" aria-current="page">台灣卡</li>
+    </ol>
+  </nav>
+</div>
+<!-- -->
+<div class="container-fluid  bg-white ">
+  <div class="container">
+    <div class="row" id="demos">
+      <div class="col-sm-12"> 
+        
+        <!--  owl-carousel 形象anner形象Bannerb-->
+        <div class="loop banner_slider owl-carousel owl-theme">
+          <div class="item"> <img src="img/card-banner-1.jpg" class="img-fluid"> </div>
+          <div class="item"> <img src="img/card-banner-2.jpg" class="img-fluid"> </div>
+          <div class="item"> <img src="img/card-banner-3.jpg" class="img-fluid"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid  bg-white ">
+  <div class="container"> 
+ 
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 mt-3 order-md-2  ">
+		  
+		<!-- 選擇方案 小區塊 --> 
+        <div class="card mb-4 box-shadow border-r1">
+          <div class="card-body">
+            <div class="col-sm-12 text-left">
+				<!-- 20210606 新增　原價訊息 -->
+              <h2 class="card-dash-board-number align-baseline">TWD 599 <span class="sub-text">起</span> <span class="originalz originalz-big">TWD 3,000</span></h2>
+				<!-- 20210606 因應新增原價訊息 調整設定 -->
+			  <!-- 已經點擊 加入我的最愛 -->	
+              <button class="mywish-active mywish-active-carddetail mr-2 pull-right"></button>
+			  <!-- 已經點擊 加入我的最愛 
+              <button class="mywish-active mywish-active-carddetail mr-2 pull-right"></button>	-->	
+            </div>
+            <div class="col-sm-12 text-left">
+              <p class="align-baseline">4.5<img src="img/icon_star2.svg" class="star-icon align-baseline"><span class="home-card-info-price-small mr-2 align-baseline">(2300)</span></p>
+            </div>
+            <div class="col-sm-12 text-left"> <a href="#order" class="btn btn-login btn-blcok w-100 mb-3">選擇方案</a> </div>
+            <div class="col-sm-12 text-left"> <a href="#order" class="btn payment-btn-yes btn-blcok w-100 mb-3" data-toggle="modal" data-target="#vendor-list">查看優惠</a> </div>
+          </div>
+          <div class="card-body border-top p-0 text-center">
+            <button class="btn btn-nooutline mr-3 mt-0 align-bottom"> <img src="img/icon_point.svg" class="star-icon-lg"> 可累積點數 </button>
+            <button class="btn btn-nooutline mr-3 align-bottom"> <img src=" img/icon_coupon.svg" class="star-icon-lg"> 可累積點數 </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-sm-12 mt-3 order-md-1  " >
+	  <!-- 卡片介紹 -->	  
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <h2><strong>台灣卡</strong></h2>
+          </div>
+          <div class="col-sm-12 text-left gray-color mt-3"> <i class="fa fa-map-marker mr-1"></i> 台灣
+            <hr class="mt-0	">
+          </div>
+          <div class="col-sm-12 mb-5">
+            <p>台灣卡 / 特色</p>
+            <p> 【據點最多】◇任你挑隨你選！一卡即可住遍200家以上飯店旅館！ </p>
+            <p>【價格最優】◇團體特惠價。持卡訂房，即享旅行社、遊覽車團體價！ </p>
+            <p>【多元選擇】◇持卡可任意選擇各地商旅地點、飯店型態、房間類型等！ </p>
+            <p>【輕鬆入會】◇讓會員輕鬆享受「渡假旅遊」+「商務出差」。 </p>
+            <p>【輕鬆續卡】◇會員卡片到期前 &#8249;預約續卡&#8250; 只要0000元。(不須每次訂房重覆購券) </p>
+            <p>【無限訂房】◇持卡訂房不限房間數、次數、人數，皆為會員價！</p>
+            <p>【購物折抵】◇憑卡訂購本網站商品，可享抵扣優惠！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--合作飯店與店家優惠價格清單 Modal -->
+<div class="modal fade " id="vendor-list" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background: none; border: none">
+      <div class="card-deck mb-3 text-center mt-3">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body"> 
+            
+            <!-- -->
+            <div class="scroll-header">
+              <button class=" modal-close close" data-dismiss="modal"><span>×</span></button>
+              <div class="row mt-3 ">
+                <div class="col-lg-6 col-sm-12  justify-content-left">
+                  <p class="text-left mt-2">合作飯店與店家優惠價格清單</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-xs12 justify-content-center  ">
+                  <div class="input-group scroll-header-input-group">
+                    <input placeholder="" type="text"  class="form-control btn-nooutline" >
+                    <span class="input-group-btn">
+                    <button class="btn btn-nooutline" data-dismiss="popover-x"><img src="img/icon_search-2.svg" class="nav-search-icon"  > </button>
+                    </span> </div>
+                </div>
+              </div>
+              <div class="scroll-body mt-3 mb-3">
+                <div id="accordion" class="scroll-accordion"> 
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading1">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse"> 1.台北喜來登大飯店 </button>
+                      </h5>
+                    </div>
+                    <div id="collapse1" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading2">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse"> 2.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse2" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading3">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse"> 3.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse3" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading4">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse"> 4.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse4" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading5">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse"> 5.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading6">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse"> 6.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse6" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading7">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse"> 7.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse7" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- -->
+                  <div class="card">
+                    <div class="card-header" id="heading8">
+                      <h5 class="mb-0">
+                        <button class="btn btn-block collapsed text-left btn-nooutline" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse"> 8.台北士林萬麗酒店</button>
+                      </h5>
+                    </div>
+                    <div id="collapse8" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                      <div class="card-body text-left">
+                        <p class="m-0 p-0"><strong>※會員優惠價格</strong></p>
+                        <p>不含早餐 4389 NTD</p>
+                        <p class="m-0 p-0"><strong>※注意事項</strong></p>
+                        <p class="m-0 p-0">特殊日期不適用;每日房間數量有限，請及早訂房。</p>
+                        <p class="m-0 p-0"><small>CODE S7587</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              
+              <!--  --> 
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 手機版 頁內跳頁選單  -->
+
+<div class="container-fluid  bg-white d-lg-none d-md-block d-sm-block mb-3 mt-3 card-detail-nav ">
+  <div class="row">
+    <div class="col-sm-12 table-responsive">
+      <table class="table mb-0">
+        
+          <td class="card-detail-nav-item active"><a href="#howto">如何使用</a></td>
+          <td class="card-detail-nav-item"><a href="#location">體驗地點</a></td>
+          <td class="card-detail-nav-item"><a href="#canceldeal">取消說明</a></td>
+          <td class="card-detail-nav-item"><a href="#review">會員評價</a></td>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 未定稿  --><!-- 訂閱方案  -->
+
+<main role="main" class="container-fluid bg-light py-5 " id="order" >
+  <div class="container"> 
+    <!-- -->
+    
+    <div class="row"> 
+      <!--  -->
+      
+      <div class="col-sm-12 ">
+        <div class="card mt-3 mb-3 box-shadow">
+          <div class="card-body"> 
+            
+            <!-- pc版 -->
+            <div class=" d-lg-block d-md-block d-sm-none d-none ">
+              <div class="row ">
+                <div class="col-lg-6 col-sm-6 ">
+                  <h4><strong>三個月訂閱方案</strong></h4>
+                  <p class="text-left small"> 有限期限：三個月 </p>
+                  <ul class="text-left pl-4 small ">
+                    <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+                    <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+                    <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+                    <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 ">
+                  <div class="row">
+                    <div class="col-sm-9  text-right">
+                      <p class="card-dash-board-number mb-0 mt-5"> TWD 599</p>
+                      <p><span class="originalz m-0 p-0" >TWD 3,000</span></p>
+                    </div>
+                    <div class="col-sm-3 text-left">
+                      <button class="btn btn-lg coupon-btn mt-5" type="button" data-toggle="collapse" data-target="#dtailOnfo1" aria-expanded="false" aria-controls="dtailOnfo1"> <span> 選擇 </span> </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- mobile版 -->
+            <div class="row d-lg-none d-md-none d-sm-block ">
+              <div class="col-sm-12 ">
+                <h4><strong>一年訂閱方案</strong></h4>
+                <p class="card-dash-board-number m-0 p-0"> TWD 599</p>
+                <p><span class="originalz m-0 p-0" >TWD 3,000</span></p>
+                <p class="text-left small"> 有限期限：一年 </p>
+                <ul class="text-left pl-4 small ">
+                  <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+                  <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+                  <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+                  <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+                </ul>
+                <button class="btn btn-block coupon-btn btn-file" data-toggle="collapse" data-target="#dtailOnfo1" aria-expanded="false" aria-controls="dtailOnfo1"> 選擇 </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="collapse border-top p-3" id="dtailOnfo1">
+                  <div class="row">
+                    <div class="col-lg-6 col-sm-12 ">
+                      <h4>方案選項</h4>
+					<!-- 20210602 1312 修改 -->	
+						 <div class="mt-2 mb-2 custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="iagree">
+                    <label class="custom-control-label sub-text" for="iagree" > 我已閱讀並同意 <a href="#">自動續約條款說明</a> 之條款 </label>
+                  </div>
+					  <p id="system-info" class="sys-feedback"> <small>**請勾選「已閱讀並同意自動續約條款說明」**</small></p>
+                    <!-- 20210602 1312 修改 -->	 
+                    </div>
+                    <div class="col-lg-6 col-sm-12 ">
+                      <div class="row">
+                        <div class="col-lg-8 col-sm-12 text-right  d-lg-block d-md-block d-sm-none d-none">
+                          <p class="card-dash-board-number mt-5"> TWD 599</p>
+                          <p><span class="originalz m-0 p-0" >TWD 3,000</span></p>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 text-left">
+                          <button class="btn btn-lg coupon-btn mt-5 custom-xs-btn-block" type="button" > <span > 立即訂購 </span> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 ">
+        <div class="card mt-0 mb-0 box-shadow">
+          <div class="card-body"> 
+            
+            <!-- pc版 -->
+            
+            <div class=" d-lg-block d-md-block d-sm-none d-none">
+              <div class="row ">
+                <div class="col-lg-6 col-sm-6 ">
+                  <h4><strong>六個月訂閱方案</strong></h4>
+                  <p class="text-left small"> 有限期限：六個月 </p>
+                  <ul class="text-left pl-4 small ">
+                    <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+                    <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+                    <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+                    <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 ">
+                  <div class="row">
+                    <div class="col-sm-9  text-right">
+                      <p class="card-dash-board-number mb-0 mt-5"> TWD 899</p>
+                    </div>
+                    <div class="col-sm-3 text-left">
+                      <button class="btn btn-lg coupon-btn mt-5" type="button" data-toggle="collapse" data-target="#dtailOnfo2" aria-expanded="false" aria-controls="dtailOnfo2"> <span> 選擇 </span> </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- mobile版 -->
+            <div class="row d-lg-none d-md-none d-sm-block ">
+              <div class="col-sm-12 ">
+                <h4><strong>六個月訂閱方案</strong></h4>
+                <p class="card-dash-board-number m-0 p-0"> TWD 899</p>
+                <p class="text-left small"> 有限期限：六個月 </p>
+                <ul class="text-left pl-4 small ">
+                  <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+                  <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+                  <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+                  <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+                </ul>
+                <button class="btn btn-block coupon-btn btn-file" data-toggle="collapse" data-target="#dtailOnfo2" aria-expanded="false" aria-controls="dtailOnfo2"> 選擇 </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="collapse border-top p-3" id="dtailOnfo2">
+                  <div class="row">
+                    <div class="col-lg-6 col-sm-12 ">
+                      <h4>方案選項</h4>
+					<!-- 20210602 1312 修改 -->		
+                      <div class="mt-2 mb-2 custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="iagree2">
+                    <label class="custom-control-label sub-text" for="iagree2" >我已閱讀並同意 <a href="#">自動續約條款說明</a> 之條款</label>
+                  </div>
+                      <p id="system-info2" class="sys-feedback"> <small>**請勾選「已閱讀並同意自動續約條款說明」**</small></p>
+                      <!-- 20210602 1312 修改 -->	
+                    </div>
+                    <div class="col-lg-6 col-sm-12  ">
+                      <div class="row">
+                        <div class="col-lg-8 col-sm-12  text-right d-lg-block d-md-block d-sm-none d-none">
+                          <p class="card-dash-board-number mt-5"> TWD 899</p>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 text-left">
+                          <button class="btn btn-lg coupon-btn mt-5 custom-xs-btn-block" type="button" > <span > 立即訂購 </span> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 ">
+        <div class="card mt-3 mb-3 box-shadow">
+          <div class="card-body"> 
+            
+            <!-- pc版 -->
+            
+            <div class=" d-lg-block d-md-block d-sm-none d-none">
+              <div class="row ">
+                <div class="col-lg-6 col-sm-6 ">
+                  <h4><strong>一年訂閱方案</strong></h4>
+                  <p class="text-left small"> 有限期限：一年 </p>
+                  <ul class="text-left pl-4 small ">
+                    <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+                    <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+                    <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+                    <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 ">
+                  <div class="row">
+                    <div class="col-sm-9  text-right">
+                      <p class="card-dash-board-number mb-0 mt-5"> TWD 1,299</p>
+                    </div>
+                    <div class="col-sm-3 text-left">
+                      <button class="btn btn-lg coupon-btn mt-5" type="button" data-toggle="collapse" data-target="#dtailOnfo3" aria-expanded="false" aria-controls="dtailOnfo3"> <span> 選擇 </span> </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- mobile版 -->
+            <div class="row d-lg-none d-md-none d-sm-block ">
+              <div class="col-sm-12 ">
+                <h4><strong>一年訂閱方案</strong></h4>
+                <p class="card-dash-board-number m-0 p-0"> TWD 1,299</p>
+                <p class="text-left small"> 有限期限：一年 </p>
+                <ul class="text-left pl-4 small ">
+                  <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+                  <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+                  <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+                  <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+                </ul>
+                <button class="btn btn-block coupon-btn btn-file" data-toggle="collapse" data-target="#dtailOnfo3" aria-expanded="false" aria-controls="dtailOnfo3"> 選擇 </button>
+              </div>
+            </div>
+            <div class="row mt-0">
+              <div class="col-sm-12">
+                <div class="collapse border-top p-3" id="dtailOnfo3">
+                  <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                      <h4>方案選項</h4>
+					<!-- 20210602 1312 修改 -->		
+                     <div class="mt-2 mb-2 custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="iagree3">
+                    <label class="custom-control-label sub-text" for="iagree3">我已閱讀並同意 <a href="#">自動續約條款說明</a> 之條款</label>
+                  </div>
+                      <p id="system-info3" class="sys-feedback"> <small>**請勾選「已閱讀並同意自動續約條款說明」**</small></p>
+                      <!-- 20210602 1312 修改 -->	
+                    </div>
+                    <div class="col-lg-6 col-sm-12 ">
+                      <div class="row">
+                        <div class="col-lg-8 col-sm-12  text-right d-lg-block d-md-block d-sm-none d-none">
+                          <p class="card-dash-board-number mt-5"> TWD 1,299</p>
+                        </div>
+                        <div class="col-lg-4 col-sm-12  text-left">
+                          <button class="btn btn-lg coupon-btn mt-5 custom-xs-btn-block" type="button" > <span > 立即訂購 </span> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  --> 
+      
+    </div>
+  </div>
+</main>
+
+<!-- -->
+<main role="main" class="container-fluid  bg-white py-5  " >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-sm-12 "> 
+        
+        <!-- 說明內容 -->
+        <div class="row mb-3 mt-3" id="howto">
+          <div class="col-sm-12">
+            <h4><strong>如何使用</strong></h4>
+            <ul class="text-left pl-5 ">
+              <li class="card-dash-board-item"> 持卡可使用所有加盟飯店</li>
+              <li class="card-dash-board-item"> 持卡住宿需事先預約訂房 </li>
+              <li class="card-dash-board-item"> 訂房不限次數、間數、人數 </li>
+              <li class="card-dash-board-item"> 隨時線上查詢可使用飯店</li>
+            </ul>
+            <hr>
+          </div>
+        </div>
+        
+        <!-- -->
+        <div class="row mb-3 mt-3" id="location">
+          <div class="col-sm-12">
+            <h4><strong>體驗地點</strong></h4>
+            <p>地址：台灣</p>
+            <div class="iframe-rwd">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3753993.1765502775!2d119.11501337200575!3d23.242760962484475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1621820390637!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <hr>
+          </div>
+        </div>
+        
+        <!-- -->
+        <div class="row mb-3 mt-3" id="canceldeal">
+          <div class="col-sm-12">
+            <h4><strong>取消說明</strong></h4>
+            <p> 欲取消訂單，如以信用卡方式支付，退款則以退刷方式退款，如透過跨行匯款方式支付訂金，將酌收匯款跨行手續費。 </p>
+            <p>本公司保留變更相關規定的權利，如有異動，依現場為主。</p>
+            <hr>
+          </div>
+        </div>
+        
+        <!--會員評價 -->
+        <div class="row mb-3 mt-3" id="review">
+          <div class="col-sm-8">
+            <h4><strong>會員評價</strong></h4>
+            <h4>4.5 <img src="img/icon_star2.svg" class="star-icon-lg align-baseline"><small>2,300則評價</small></h4>
+            <p>本公司保留變更相關規定的權利，如有異動，依現場為主。</p>
+          </div>
+          <div class="col-sm-4">
+            <select class="custom-select d-block pull-rightw w-100 my-5"  id="reviewSort" required="">
+              <option value="">評價由高至低 </option>
+              <option>評價由低至高</option><br>
+				<!--20210606 - 排序請預設顯示「最新日期」-->
+			  <option>最新日期</option>
+            </select>
+            <!-- --> 
+            
+          </div>
+          <div class="col-sm-12">
+            <div class="row"> 
+              <!-- -->
+              <div class="col-sm-12 text-left">
+				  <!-- 20210606 -	會員頭像請調整為：會員ICON，依照性別分顏色(藍或橘) -->
+                <div class="reviewbox"><img src="img/icon_log_bule.svg" class="user-icon-review ">
+                  <div class="reviewbox_body">
+                    <p class="m-0"><small >小明 </small></p>
+                    <p class="m-0"> 
+                    <span class="">
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar bad"></div>
+                    </span> <span><strong>非常棒的體驗</strong></span>
+                    </p>
+                    <p class="m-0">非常棒的體驗，無論是硬體設施或是人員的服務態度。餐廳很棒，食物也都有一定水準，除了燒烤吃到飽，其餘皆可使用A+</p>
+                    <div class="picture">
+                      <div class="item" data-target="#picture_1" style="background-image: url(./img/picture/pic01.jpg);"></div>
+                      <div class="item" data-target="#picture_1" style="background-image: url(./img//picture/pic02.jpg);"></div>
+                      <div class="item" data-target="#picture_1" style="background-image: url(./img/picture/pic03.jpg);"></div>
+                    </div>
+                    <div class="picture_popup" id="picture_1">
+                      <div class="head">
+                        <div class="editor">
+                          <span class="avatar" style="background-image: url(./img/card-banner-1.jpg);"></span>小明
+                        </div>
+                        <div class="close_btn"><i class="fas fa-times"></i></div>
+                      </div>
+                      <div class="picture_silder owl-carousel owl-theme">
+                        <div class="item">
+                          <img src="./img/picture/pic01.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="./img/picture/pic02.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="./img/picture/pic03.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <!-- -->
+              <div class="col-sm-12 text-left">
+				  <!-- 20210606 -	會員頭像請調整為：會員ICON，依照性別分顏色(藍或橘) -->
+                <div class="reviewbox"><img src="img/icon_log_yellow.svg" class="user-icon-review ">
+                  <div class="reviewbox_body">
+                    <p class="m-0"><small >小明 </small></p>
+                    <p class="m-0"> 
+                    <span class="">
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar bad"></div>
+                    </span> <span><strong>非常棒的體驗</strong></span>
+                    </p>
+                    <p class="m-0">非常棒的體驗，無論是硬體設施或是人員的服務態度。餐廳很棒，食物也都有一定水準，除了燒烤吃到飽，其餘皆可使用A+</p>
+                    <div class="picture">
+                      <div class="item" data-target="#picture_2" style="background-image: url(./img/card-banner-1.jpg);"></div>
+                      <div class="item" data-target="#picture_2" style="background-image: url(./img/card-banner-2.jpg);"></div>
+                      <div class="item" data-target="#picture_2" style="background-image: url(./img/card-banner-3.jpg);"></div>
+                    </div>
+                    <div class="picture_popup" id="picture_2">
+                      <div class="head">
+                        <div class="editor">
+                          <span class="avatar" style="background-image: url(./img/card-banner-1.jpg);"></span>小王
+                        </div>
+                        <div class="close_btn"><i class="fas fa-times"></i></div>
+                      </div>
+                      <div class="picture_silder owl-carousel owl-theme">
+                        <div class="item">
+                          <img src="./img/card-banner-1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="./img/card-banner-2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                          <img src="./img/card-banner-3.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <!-- -->
+              <div class="col-sm-12 text-left">
+				  <!-- 20210606 -	會員頭像請調整為：會員ICON，依照性別分顏色(藍或橘) -->
+                <div class="reviewbox"><img src="img/icon_log_bule.svg" class="user-icon-review ">
+                  <div class="reviewbox_body">
+                    <p class="m-0"><small >小明 </small></p>
+                    <p class="m-0"> 
+                    <span class="">
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar bad"></div>
+                    </span> <span><strong>非常棒的體驗</strong></span>
+                    </p>
+                    <p class="m-0">非常棒的體驗，無論是硬體設施或是人員的服務態度。餐廳很棒，食物也都有一定水準，除了燒烤吃到飽，其餘皆可使用A+</p>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <!-- -->
+              <div class="col-sm-12 text-left">
+				  <!-- 20210606 -	會員頭像請調整為：會員ICON，依照性別分顏色(藍或橘) -->
+                <div class="reviewbox"><img src="img/icon_log_yellow.svg" class="user-icon-review ">
+                  <div class="reviewbox_body">
+                    <p class="m-0"><small >小明 </small></p>
+                    <p class="m-0"> 
+                    <span class="">
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar good"></div>
+                    <div class="reviewStar bad"></div>
+                    </span> <span><strong>非常棒的體驗</strong></span>
+                    </p>
+                    <p class="m-0">非常棒的體驗，無論是硬體設施或是人員的服務態度。餐廳很棒，食物也都有一定水準，除了燒烤吃到飽，其餘皆可使用A+</p>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- --> 
+        
+        <!-- 分頁 nav -->
+        
+        <div class="row mb-3 mt-3">
+          <div class="col-sm-12 text-center">
+            <ul class="cardlist-pagination mt-5 mb-5">
+              <li><a href="#" class="active">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+		
+		
+	<!-- pc版 頁內跳頁選單  -->	
+      <aside class="col-3 col-sm-3 blog-sidebar d-lg-block d-md-block d-sm-none d-none  ">
+        <div class="p-3 mb-3" id="sidebarNav">
+          <p  class="card-detail-sidebar-item active"> <a href="#howto" >如何使用</a></p>
+          <p  class="card-detail-sidebar-item"> <a href="#location" >體驗地點</a></p>
+          <p  class="card-detail-sidebar-item"> <a href="#canceldeal" >取消說明</a></p>
+          <p  class="card-detail-sidebar-item"> <a href="#review" >會員評價</a></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- Footer 頁底版型 -->
+<footer class="bd-footer bg-jonit py-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 col-xs-12"> <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap"> <img src="img/footer_logo@2x.png"  class="footr-logo"> </a>
+        <ul class="company-info">
+          <li class="mb-2">在一起管顧科技股份有限公司 </li>
+          <li class="mb-2">地址 高雄市苓雅區新光路38號32樓之3B</li>
+          <li class="mb-2">連絡電話 07-2691686</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-xs-12">
+        <div class="row justify-content-around">
+          <div class=" col-lg-4 col-xs-12">
+            <h5 class="footer-h5">認識在一起</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">關於我們</a></li>
+              <li class="mb-2"><a href="#">品牌故事</a></li>
+              <li class="mb-2"><a href="#">官方部落格</a></li>
+              <li class="mb-2"><a href="#">媒體報導</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">給旅客</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">特點</a></li>
+              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="#">回饋購物金</a></li>
+              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="#">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="#">使用者條款</a></li>
+              <li class="mb-2"><a href="#">常見問題</a></li>
+              <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">在一起合作夥伴</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">成為供應商</a></li>
+              <li class="mb-2"><a href="#">同業合作</a></li>
+              <li class="mb-2"><a href="#">聯盟行銷</a></li>
+              <li class="mb-2"><a href="#">人才招募</a></li>
+              <li class="mb-2"><a href="#">團體客製規劃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-copyright">COPYRIGHT © 2021 Joinit All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-better-nav.min.js"></script> 
+<script>
+        $(document).ready(function () {//手機選單js
+ $('.dropdown-toggle').dropdown();
+        });
+    </script> 
+<!-- bootstrap 常用模組 js 引入--> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- bootstrap 常用彈出模組 js 引入 --> 
+<script type="text/javascript" src="js/popper.min.js"></script> <script type="text/javascript" src="js/bootstrap-popover-x.js"></script> 
+<script>
+	
+	function checkgo() {
+  // Get the checkbox
+  var checkBox = document.getElementById("checkinfo");
+  // Get the output text
+  var text = document.getElementById("system-info");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+	
+	function checkgo2() {
+  // Get the checkbox
+  var checkBox = document.getElementById("checkinfo2");
+  // Get the output text
+  var text = document.getElementById("system-info2");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+	
+		
+	function checkgo3() {
+  // Get the checkbox
+  var checkBox = document.getElementById("checkinfo3");
+  // Get the output text
+  var text = document.getElementById("system-info3");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+	</script> 
+<script src="js/owl.carousel.js"></script> 
+<script> 
+      $('.banner_slider').owlCarousel({
+        items:2,
+        loop:true	,
+        center:true,
+        margin:10,
+        URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: 'URLHash',
+				responsive: {
+					360: {
+            items: 1,
+    
+          },
+          480: {
+            items: 1,
+    
+          },
+					1920: {
+            items: 2,
+					  
+          },
+					1280: {
+            items: 2,
+          },
+					 960: {
+            items: 1,
+          },
+        }
+    });
+    </script>
+  <script>
+    $('.picture_silder').owlCarousel({
+        items:1,
+        loop:true	,
+        //autoHeight:true,
+        dats:true,
+        nav:true
+    })
+
+    let body = document.querySelector('body')
+    let picture_btns = document.querySelectorAll('.reviewbox .picture .item')
+
+    picture_btns.forEach((item)=>{
+      item.addEventListener('click',(event)=>{
+        let target = item.dataset.target
+        let picture_popup  = document.querySelector(target)
+        let silder = picture_popup.querySelector('.picture_silder')
+        let index = Array.prototype.slice.call( item.parentElement.children ).indexOf(item)
+
+        $(silder).trigger("to.owl.carousel", [index, 500, true]);
+        body.classList.add('fixed')
+        picture_popup.classList.toggle('active')
+      })
+    })
+
+    let picture_closes = document.querySelectorAll('.picture_popup .close_btn')
+    picture_closes.forEach((item)=>{
+      item.addEventListener('click',(event)=>{
+        let picture_popup  = item.parentElement.parentElement
+
+        body.classList.remove('fixed')
+        picture_popup.classList.toggle('active')
+      })
+    })
+  </script>
+
+</body>
+</html>

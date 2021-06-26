@@ -1,0 +1,119 @@
+預覽登入
+帳號 guest
+密碼 12345678
+
+//////////////////////////
+
+全 檔案zip 下載 
+http://2jc.co/20210602/00-ver-3-20210602-1045.zip
+
+//////////////////////////
+
+
+本批檔案
+//////////////////////////
+新增常用會員
+http://2jc.co/20210602/add-member-1.html
+
+新增常用會員-編輯
+http://2jc.co/20210602/add-member-2.html
+
+會員卡詳細頁
+http://2jc.co/20210602/card-detail.html
+
+會員卡清單列表
+http://2jc.co/20210602/card-list.html
+
+系統已發送驗證碼
+http://2jc.co/20210602/checkcode.html
+
+忘記密碼 成功訊息
+http://2jc.co/20210602/forgetpasswd.html
+
+忘記密碼 失敗訊息
+http://2jc.co/20210602/forgetpasswd-false.html
+
+首頁 未登入前
+http://2jc.co/20210602/index.html
+
+首頁 登入後
+http://2jc.co/20210602/index-login.html
+
+空白頁面 登入後
+http://2jc.co/20210602/masterpage-login.html
+
+空白頁面 未登入前
+http://2jc.co/20210602/masterpage.html
+
+登入頁
+http://2jc.co/20210602/login.html
+
+亞洲卡3D展示
+http://2jc.co/20210602/member-Asia-card.html
+
+全球卡3D展示
+http://2jc.co/20210602/member-Gobal-card.html
+
+台灣卡3D展示
+http://2jc.co/20210602/member-Taiwan-card.html
+
+Vip卡3D展示
+http://2jc.co/20210602/member-Vip-card.html
+
+會員卡 未審核狀態
+http://2jc.co/20210602/member-center-card-pass-fail-lock.html
+
+會員卡 已審核狀態
+http://2jc.co/20210602/member-center-card-pass-normal.html
+
+會員中心　客戶資料編輯
+http://2jc.co/20210602/member-center-profile-1.html
+
+會員中心　修改密碼
+http://2jc.co/20210602/member-center-profile-2.html
+
+訂購清單與付款資訊　未定稿　－　客戶彩稿版本
+http://2jc.co/20210602/payment-step1.html
+
+訂購清單與付款資訊（發票）　未定稿　－　客戶彩稿版本
+http://2jc.co/20210602/payment-step1-for-business.html
+
+訂購清單與付款資訊　未定稿　－ 試做版本, 未確認
+http://2jc.co/20210602/payment-step1-buttom-fixed.html
+
+訂購完成
+http://2jc.co/20210602/payment-step2.html
+
+註冊
+http://2jc.co/20210602/reg.html
+
+註冊 成功訊息
+http://2jc.co/20210602/reg-ok.html
+
+重設密碼
+http://2jc.co/20210602/resetpasswd.html
+
+訂閱服務說明
+http://2jc.co/20210602/SubscriptionServices.html
+
+合作飯店與店家優惠價格清單
+http://2jc.co/20210602/vendor-list.html
+
+
+////////////////////
+
+依據 0601調整_切版討論0531給J.ppt 文件中反饋問題,　尚未修改清單
+
+第２頁　未確定修改方式, 等待確認
+第３頁　已經新增連結, 但尚未提供對應的圖片ｓｖｇ檔
+第１８頁　尚未修改
+第１９頁　尚未修改
+
+－－－－－－－－－－－－－－－
+１９～２６頁　經手機測試　無法再現回饋的問題狀況, 無法進行調整
+
+－－－－－－－－－－－－－－－
+
+其他皆已經修改　請參考　0601調整_切版討論0531給J--20210602回覆.ppt
+
+

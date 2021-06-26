@@ -1,0 +1,695 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-tw" />
+<title>Join it</title>
+<!--bootstrap 4.6 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
+<!-- 手機側邊選單 -->
+<link href="css/bootstrap-better-nav.css" rel="stylesheet" type="text/css">
+<!-- 圖示字形引入 F.A.5.51-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link href="css/bootstrap-popover-x.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- Page Heade NAV -->
+<div class="d-flex flex-md-row align-items-center p-3 px-md-4 bg-joinit-header border-bottom box-shadow fixed-top">
+  <div class="container">
+    <div class="row justify-content-between ">
+      <div class="col-2"><a class="navbar-brand" href="#"><img src="img/header_logo@2x.png" class="nav-logo"></a> </div>
+      <!-- 登入後 PC版  NAV的選單  -->
+      <div class="col-6 d-none d-lg-block d-xs-none">
+        <div class="input-group ">
+          <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control" data-toggle="popover-x" data-target="#navsearch" data-placement="bottom">
+          <span class="input-group-btn">
+          <button class="btn" data-dismiss="popover-x"><img src="img/icon_search-2.svg" class="nav-search-icon"  > </button>
+          </span></div>
+        <!-- PC 版本 NAV 搜尋功能的彈跳推薦選項  -->
+        <div id="navsearch" class="popover popover-x popover-default homePopover-box">
+          <div class="arrow"></div>
+          <div class="popover-body popover-content">
+            <h4> 熱門目的地 </h4>
+            <ul class="popover-ul">
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">高雄1</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台南</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">南投</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台北</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">香港</button>
+              </li>
+            </ul>
+            <button class="btn btn-sm btn-primary pull-right m-3 homePopover-btn" data-dismiss="popover-x"> 送出 </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 "> 
+        <!-- 手機側邊選單 -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-nav-joinit">
+          <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <button class="navbar-toggler navbar-toggler-cart" type="button" data-toggle="collapse" data-target="#navbarSupportedContent4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img src="img/icon_cart-2-w.svg" class="cart-icon"></button>
+          <button class="navbar-toggler navbar-toggler-search" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <img class="search-icon" src="img/icon_search-2-w.svg"> </button>
+          
+          <!--  --> 
+          
+          <!-- PC NAV  選項 -->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent3">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item  d-lg-block d-md-block d-sm-none"> <a class="nav-link lan-select" href="#">ENG</a> </li>
+              <!--
+                  <li class="nav-item"> <a class="nav-link" href="#" data-toggle="modal" data-target="#login" ><img src="img/icon_log.svg" class="navbar-img-svg"> 登入/註冊</a> </li>
+                   -->
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" data-toggle="popover-x" data-target="#nav-cart" data-placement="bottom"><img src="img/icon_cart.svg" class="navbar-img-svg"> 購物車 </a> </li>
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" ><img src="img/face.jpg"  class="navbar-img-account"></a> </li>
+              <!--  手機側邊主選單 選項 -->
+              <div class="d-lg-none d-md-block d-sm-block navbarSupportedContent3  ">
+                <ul class="list-unstyled ">
+                  <li class="singin-sidebar-item " ><img src="img/face.jpg"  class="face"> <span class="name">Lee</span></li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_cart_m1"></span>購物車</li>
+                  <li class="singin-sidebar-item active" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_card_m1"></span>我的會員卡禮遇</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_profile_m1"></span>會員資料維護</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_add_m1"></span>常用旅客</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_point_m1"></span>我的點數</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_coupon_m1"></span>折扣券</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_order_m1"></span>訂單管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_msg_m1"></span>訊息管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_like_m1"></span>我的收藏</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_qrcode_m1"></span>產生QRcode</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_fb_m1"></span>分享推薦碼到FB</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_line_m1"></span>分享推薦碼到Line</li>
+                  <li class="singin-sidebar-item singout " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_logout_m1 "></span>登出</li>
+                  <li class="singin-sidebar-item singout" onClick="javascript:location.href='http://www.google.com'"> <span class="eng">ENG</span></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!--未定搞 --> <!-- PC 版本購物車小工具功能的彈跳推薦選項  -->
+          <div id="nav-cart" class="popover popover-x popover-default homePopover-box">
+            <div class="arrow"></div>
+            <div class="popover-body popover-content">
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="border-top w-100">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                      <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <!--手機版的側邊搜尋功能  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent2">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent2" >
+                <div class="input-group navsearch-input " style="padding: 0">
+                  <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control " >
+                  <span class="input-group-btn">
+                  <button class="btn"><img src="img/icon_search-2.svg" class="nav-search-icon"  data-toggle="popover-x" data-target="#homePopover" data-placement="bottom"> </button>
+                  </span></div>
+                <ul class="popover-ul py-3">
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">高雄</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台南</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">南投</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台北</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">香港</button>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!-- 手機版本側邊購物車清單  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent4">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent4" >
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="border-top w-100">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                        <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </div>
+          
+          <!--  --> 
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 麵包屑位置引導 -->
+<div class="container ">
+  <nav >
+    <ol class="breadcrumb joinit-breadcrumb">
+      <li class="breadcrumb-item"><a href="#">首頁</a></li>
+      <li class="breadcrumb-item" ><a href="#">會員中心</a></li>
+      <li class="breadcrumb-item active" aria-current="page">會員資料維護</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- 主內容 -->
+<main role="main" class="container">
+  <div class="row"> 
+    <!-- 登入後 會員頁面側邊選單 -->
+    <aside class="col-lg-3 blog-sidebar d-lg-block d-md-none d-sm-none d-none">
+      <div class="p-3">
+        <ol class="list-unstyled">
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_card_m1"></span>我的會員卡禮遇</li>
+          <li class="member-sidebar-item active" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_profile_m1"></span>會員資料維護<span class="aler-spot danger"></span></li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_add_m1"></span>常用旅客</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_point_m1"></span>我的點數</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_coupon_m1"></span>折扣券</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_order_m1"></span>訂單管理</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_msg_m1"></span>訊息管理</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_like_m1"></span>我的收藏</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_qrcode_m1"></span>產生QRcode</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_fb_m1"></span>分享推薦碼到FB</li>
+          <li class="member-sidebar-item" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_line_m1"></span>分享推薦碼到Line</li>
+          <li class="member-sidebar-item singout" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_logout_m1"></span>登出</li>
+        </ol>
+      </div>
+    </aside>
+    <div class="col-lg-9 blog-main"> 
+      <!-- TabContent 頁籤分頁功能 -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item"> <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">會員資料維護</a> </li>
+        <li class="nav-item"> <a class="nav-link " id="passwd-tab" data-toggle="tab" href="#passwd" role="tab" aria-controls="passwd" aria-selected="false">變更密碼</a> </li>
+        <li class="nav-item"> </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="row">
+            <div class="col-md-12 "><!-- 審核狀態 alert -->
+              <div class="alert alert-secondary mt-3 mb-3" role="alert"> <span class="aler-spot process"></span> <strong> 資料審核狀態：</strong> 審核中... </div>
+              <div class="alert alert-secondary mt-3 mb-3" role="alert"> <span class="aler-spot danger"></span> <strong> 資料審核狀態：</strong> 審核失敗，失敗原因： </div>
+              <form class="py-3" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12 ">
+                        <label for=" "> 會員正面照片 <span class="sys-feedback"> *請上傳本人單獨/正面/近期照片 </span> </label>
+                        <button type="button" class="btn bnt-link d-lg-none d-md-block d-sm-block " data-toggle="modal" data-target="#photoNote"><img src="img/icon_info.svg" class="nav-search-icon pull-right"></button>
+                        <div class="text-center mt-5">
+                          <div class="photo-upload align-bottom ">
+                            <div class="camera-icon"><img src="img/icon_photo.svg" class="search-icon"></div>
+                          </div>
+                          <button class="btn coupon-btn btn-file align-bottom" type="button"> <span>上傳大頭照</span> </button>
+                          
+                          <!--會員正面照片範本 Modal -->
+                          <div class="modal fade " id="photoNote" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content" style="background: none; border: none">
+                                <div class="signin-container">
+                                  <div class="card-deck mb-3 text-center mt-3">
+                                    <div class="card mb-4 box-shadow">
+                                      <div class="card-body">
+                                        <button class="form-close" data-dismiss="modal"><span>×</span></button>
+                                        <img class="w-100 rounded " src="img/upload-photo-note-mobile.png"> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- --> 
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12"> <img class="img-fluid d-lg-block d-md-none d-sm-none d-none " src="img/upload-photo-note-pc.png"> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"> <span class="sys-feedback mt-3"> *必填欄位 </span><br>
+                    <label for="" class=" mt-0">暱稱<span class="sys-feedback"> * </span></label>
+                    <input type="input" class="form-control w-50 " id="" placeholder=" 王大明 " value="" required="required">
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">名字<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder=" 大明 " value="" required="required">
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">姓氏<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="王" value="" required="required">
+                      </div>
+                      <div class="col-lg-4  col-md-12">
+                        <label for="" class=" mt-3">英文名(同護照)<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="Wang Da Ming" value="" required="required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">性別<span class="sys-feedback"> * </span></label>
+                        <select class="custom-select d-block w-100" id="" required="required">
+                          <option value="">男</option>
+                          <option>女</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">出生日期<span class="sys-feedback"> * </span></label>
+                        <input type="date"  class="form-control " id="" placeholder="" value="" required="required">
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">國家/地區<span class="sys-feedback"> * </span></label>
+                        <select class="custom-select d-block w-100" id="" required="required">
+                          <option value="">台灣</option>
+                          <option>香港</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row ">
+                      <div class="col-lg-6 col-md-12">
+                        <label for="" class=" mt-3">電子郵件<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="abc@gmail.com" value="" required="required">
+                      </div>
+                      <div class="col-lg-3 col-md-12">
+                        <label for=" " class=" mt-3">連絡電話<span class="sys-feedback"> * </span></label>
+                        <select class="form-control"  required="required">
+                          <option value="">台灣 (Taiwan) +886 </option>
+                          <option>Vietnam (Việt Nam) +84</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-3 col-md-12">
+                        <input type="text" class="form-control mt-5" id="pnone" placeholder="0912-123-123" value="" required="required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">身份證字號<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="A123456789" value="" required="required">
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">護照號碼<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="暫無請寫 NA" value="" required="required">
+                      </div>
+                      <div class="col-lg-4  col-md-12">
+                        <label for="" class=" mt-3">台胞證號碼<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="暫無請寫 NA" value="" required="required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">市內電話<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="暫無請寫 NA" value="" required="required">
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">傳真<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="暫無請寫 NA" value="" required="required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="" class=" mt-3">戶籍地址 <span class="sys-feedback"> *請包含郵遞區號 </span> </label>
+                    <input type="input" class="form-control w-100 " id="" placeholder="80247高雄市苓雅區新光路38號32樓之3B" value="" required="required">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="" class=" mt-3 mr-2" >收件地址<span class="sys-feedback"> * </span></label>
+                    <div class="mt-2 mb-2 custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="thesame">
+                      <label class="custom-control-label sub-text" for="thesame">同戶籍地址</label>
+                    </div>
+                    <input type="input" class="form-control w-100 " id="" placeholder="80247高雄市苓雅區新光路38號32樓之3B" value="" required="required">
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">學歷<span class="sys-feedback"> * </span></label>
+                        <select class="custom-select d-block w-100" id="" required="required">
+                          <option value="">國中</option>
+                          <option>高中</option>
+                          <option>大專</option>
+                          <option>碩士</option>
+                          <option>博士</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <label for="" class=" mt-3">現職公司<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="請輸入現職公司" value="" required="required">
+                      </div>
+                      <div class="col-lg-4  col-md-12">
+                        <label for="" class=" mt-3">職稱<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="請輸入職稱" value="" required="required">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-lg-4  col-md-12">
+                        <label for="" class=" mt-3">推薦人<span class="sys-feedback"> * </span></label>
+                        <input type="input" class="form-control " id="" placeholder="AVEC" value="" required="required" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="text-center mt-5">
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6  col-sm-12">
+                        <label for=" "> 簽名 <span class="sys-feedback gray-color"> *請於下方上傳您的完整姓名 </span> </label>
+                        <button type="button" class="btn bnt-link  d-lg-none d-md-block d-sm-block  "  data-toggle="modal" data-target="#SignNote"><img src="img/icon_info.svg" class="nav-search-icon pull-right"></button>
+                        <div class="text-center mt-5"> 
+                          <!-- bootstrap-imageupload. -->
+                          <div class="signing-board align-bottom "></div>
+                          <button class="btn coupon-btn btn-file align-bottom" type="button"> <span>上傳簽名</span> </button>
+                          
+                          <!--  --> 
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12"> <img class="img-fluid d-lg-block d-md-none d-sm-none d-none " src="img/sign-note-pc.png"> </div>
+                    </div>
+                  </div>
+                  
+                  <!--上傳簽名範本 Modal -->
+                  <div class="modal fade " id="SignNote" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content" style="background: none; border: none">
+                        <div class="signin-container">
+                          <div class="card-deck mb-3 text-center mt-3">
+                            <div class="card mb-4 box-shadow">
+                              <div class="card-body">
+                                <button class="form-close" data-dismiss="modal"><span>×</span></button>
+                                <img class="w-100 rounded " src="img/sign-note-mobile.png"> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -->
+                  
+                  <div class="col-md-12">
+                    <div class="text-center mt-5">
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="text-center m-3 col-md-12">
+                    <div class="mt-2 mb-2 custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="iagree">
+                      <label class="custom-control-label" for="iagree" data-toggle="modal" data-target="#iagreemodal" >本人確認上傳的照片與簽名為本人無誤，倘若資料不實，後果由本人自行負責。</label>
+                    </div>
+                    <p class="mt-1 sub-text mb-1">*系統維護人員將不定期抽查會員的頭像辨識度，若遇到無法辨識之問題，為了所有會員的權利，在您上傳正確合格的照片前，我們將有權暫停您的會員卡，謝謝您的配合。</p>
+                    <div class="alert alert-warning  sub-text " role="alert"> 1. 按下提交後系統將送審，請等待24-72小時(工作日)審核時間，如會員資料有誤，請記得確認並提交正確資料。<br>
+                      2. 特別注意：資料送出後，在審核階段時，將無法出示會員卡，請務必在使用3個工作天前提早提交資料通過審核。 </div>
+                    <button type="button" class="btn  btn-reg-warning mb-5" data-toggle="modal" data-target="#profile-ok"> 提交審核 </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <!--特別注意提示 Modal -->
+        <div class="modal fade " id="profile-ok" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="background: none; border: none">
+              <div class="signin-container">
+                <div class="card-deck mb-3 text-center mt-3">
+                  <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                      <form class="form-signin">
+                        <button class="form-close" data-dismiss="modal"><span>×</span></button>
+                        <h4 class=" mt-5 mb-3 font-weight-bold">特別注意</h4>
+                        <p class="mt-3 mb-3">資料送出後，在審核階段時，將無法出示會員卡，<span class="text-danger">請務必在使用3個工作天前</span>提早提交資料通過審核。</p>
+                        <button class="mb-5 mt-3 mr-1 btn payment-btn-no" type="button" data-dismiss="modal">返回</button>
+                        <button class="btn payment-btn-yes mb-5 mt-3" type="button" data-dismiss="modal">確認提交</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--  -->
+        <div class="tab-pane fade" id="passwd" role="tabpanel" aria-labelledby="passwd-tab"> 
+          <!-- 密碼修改區塊  -->
+          <div class="row">
+            <div class="col-md-8 ">
+              <form class="py-3" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <label for="firstName">原密碼</label>
+                    <input type="password" class="form-control" id="" placeholder="原密碼" value="" required="required">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="firstName" class=" mt-3">新密碼</label>
+                    <input type="password" class="form-control " id="" placeholder="輸入新密碼" value="" required="required">
+                    <div class="sys-feedback sub-text ml-2"> *密碼設置8-20個字元，包含1個數字，大小寫字母各1 </div>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="password" class="form-control mt-3" id="" placeholder="再次輸入新密碼" value="" required="required">
+                  </div>
+                  <div class="col-md-12">
+                    <div class="text-center mt-5">
+                      <button type="submit" class="btn btn-reg-warning mb-5" data-toggle="modal" data-target="#passwd-ok"> 更改密碼 </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+          <!--變更密碼成功提示 Modal -->
+          <div class="modal fade " id="passwd-ok" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content" style="background: none; border: none">
+                <div class="signin-container">
+                  <div class="card-deck mb-3 text-center mt-3">
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-body">
+                        <form class="form-signin">
+                          <button class="form-close" data-dismiss="modal"><span>×</span></button>
+                          <h4 class=" mt-5 mb-3 font-weight-bold">變更密碼成功</h4>
+                          <button class="btn btn-reg-warning mb-5 mt-3" type="button" data-dismiss="modal">確認</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--  --> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row --> 
+  
+</main>
+<!-- Footer 頁底版型 -->
+<footer class="bd-footer bg-jonit py-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 col-xs-12"> <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap"> <img src="img/footer_logo@2x.png"  class="footr-logo"> </a>
+        <ul class="company-info">
+          <li class="mb-2">在一起管顧科技股份有限公司 </li>
+          <li class="mb-2">地址 高雄市苓雅區新光路38號32樓之3B</li>
+          <li class="mb-2">連絡電話 07-2691686</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-xs-12">
+        <div class="row justify-content-around">
+          <div class=" col-lg-4 col-xs-12">
+            <h5 class="footer-h5">認識在一起</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">關於我們</a></li>
+              <li class="mb-2"><a href="#">品牌故事</a></li>
+              <li class="mb-2"><a href="#">官方部落格</a></li>
+              <li class="mb-2"><a href="#">媒體報導</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">給旅客</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">特點</a></li>
+              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="#">回饋購物金</a></li>
+              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="#">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="#">使用者條款</a></li>
+              <li class="mb-2"><a href="#">常見問題</a></li>
+              <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">在一起合作夥伴</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">成為供應商</a></li>
+              <li class="mb-2"><a href="#">同業合作</a></li>
+              <li class="mb-2"><a href="#">聯盟行銷</a></li>
+              <li class="mb-2"><a href="#">人才招募</a></li>
+              <li class="mb-2"><a href="#">團體客製規劃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-copyright">COPYRIGHT © 2021 Joinit All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-better-nav.min.js"></script> 
+<script>
+        $(document).ready(function () {//手機選單js
+ 		$('.dropdown-toggle').dropdown();
+        });
+</script> 
+<!-- bootstrap 常用模組 js 引入--> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- bootstrap 常用彈出模組 js 引入 --> 
+<script type="text/javascript" src="js/popper.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap-popover-x.js"></script>
+</body>
+</html>

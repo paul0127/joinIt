@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-tw" />
+<title>Join it</title>
+<!--bootstrap 4.6 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
+<!-- 手機側邊選單 -->
+<link href="css/bootstrap-better-nav.css" rel="stylesheet" type="text/css">
+<!-- 圖示字形引入 F.A.5.51-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link href="css/bootstrap-popover-x.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- Page Heade NAV -->
+<div class="d-flex flex-md-row align-items-center p-3 px-md-4 bg-joinit-header border-bottom box-shadow fixed-top">
+  <div class="container">
+    <div class="row justify-content-between ">
+      <div class="col-2"><a class="navbar-brand" href="#"><img src="img/header_logo@2x.png" class="nav-logo"></a> </div>
+      <!-- 登入後 PC版  NAV的選單  -->
+      <div class="col-6 d-none d-lg-block d-xs-none">
+        <div class="input-group ">
+          <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control" data-toggle="popover-x" data-target="#navsearch" data-placement="bottom">
+          <span class="input-group-btn">
+          <button class="btn" data-dismiss="popover-x"><img src="img/icon_search-2.svg" class="nav-search-icon"  > </button>
+          </span></div>
+        <!-- PC 版本 NAV 搜尋功能的彈跳推薦選項  -->
+        <div id="navsearch" class="popover popover-x popover-default homePopover-box">
+          <div class="arrow"></div>
+          <div class="popover-body popover-content">
+            <h4> 熱門目的地 </h4>
+            <ul class="popover-ul">
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">高雄1</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台南</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">南投</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">台北</button>
+              </li>
+              <li class="popover-content-li ">
+                <button class="popover-content-btn">香港</button>
+              </li>
+            </ul>
+            <button class="btn btn-sm btn-primary pull-right m-3 homePopover-btn" data-dismiss="popover-x"> 送出 </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 "> 
+        <!-- 手機側邊選單 -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-nav-joinit">
+          <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <button class="navbar-toggler navbar-toggler-cart" type="button" data-toggle="collapse" data-target="#navbarSupportedContent4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img src="img/icon_cart-2-w.svg" class="cart-icon"></button>
+          <button class="navbar-toggler navbar-toggler-search" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <img class="search-icon" src="img/icon_search-2-w.svg"> </button>
+          
+          <!--  --> 
+          
+          <!-- PC NAV  選項 -->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent3">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item  d-lg-block d-md-block d-sm-none"> <a class="nav-link lan-select" href="#">ENG</a> </li>
+              <!--
+                  <li class="nav-item"> <a class="nav-link" href="#" data-toggle="modal" data-target="#login" ><img src="img/icon_log.svg" class="navbar-img-svg"> 登入/註冊</a> </li>
+                   -->
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" data-toggle="popover-x" data-target="#nav-cart" data-placement="bottom"><img src="img/icon_cart.svg" class="navbar-img-svg"> 購物車 </a> </li>
+              <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link" href="#" ><img src="img/face.jpg"  class="navbar-img-account"></a> </li>
+              <!--  手機側邊主選單 選項 -->
+              <div class="d-lg-none d-md-block d-sm-block navbarSupportedContent3  ">
+                <ul class="list-unstyled ">
+                  <li class="singin-sidebar-item " ><img src="img/face.jpg"  class="face"> <span class="name">Lee</span></li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_cart_m1"></span>購物車</li>
+                  <li class="singin-sidebar-item active" onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_card_m1"></span>我的會員卡禮遇</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_profile_m1"></span>會員資料維護</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_add_m1"></span>常用旅客</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_point_m1"></span>我的點數</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_coupon_m1"></span>折扣券</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_order_m1"></span>訂單管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_msg_m1"></span>訊息管理</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_like_m1"></span>我的收藏</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_qrcode_m1"></span>產生QRcode</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_fb_m1"></span>分享推薦碼到FB</li>
+                  <li class="singin-sidebar-item " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_line_m1"></span>分享推薦碼到Line</li>
+                  <li class="singin-sidebar-item singout " onClick="javascript:location.href='http://www.google.com'"><span class="icon icon_logout_m1 "></span>登出</li>
+                  <li class="singin-sidebar-item singout" onClick="javascript:location.href='http://www.google.com'"> <span class="eng">ENG</span></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!--未定搞 --> <!-- PC 版本購物車小工具功能的彈跳推薦選項  -->
+          <div id="nav-cart" class="popover popover-x popover-default homePopover-box">
+            <div class="arrow"></div>
+            <div class="popover-body popover-content">
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                <tbody>
+                  <tr>
+                    <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                    <td width="60%">台灣卡<br>
+                      三個月訂閱方案</td>
+                    <td width="20%">TWD 599 </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="border-top w-100">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                      <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <!--手機版的側邊搜尋功能  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent2">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent2" >
+                <div class="input-group navsearch-input " style="padding: 0">
+                  <input placeholder="輸入目的地、景點、體驗行程或活動名稱..." type="text"  class="form-control " >
+                  <span class="input-group-btn">
+                  <button class="btn"><img src="img/icon_search-2.svg" class="nav-search-icon"  data-toggle="popover-x" data-target="#homePopover" data-placement="bottom"> </button>
+                  </span></div>
+                <ul class="popover-ul py-3">
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">高雄</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台南</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">南投</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">台北</button>
+                  </li>
+                  <li class="popover-content-li ">
+                    <button class="popover-content-btn">香港</button>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <!-- 手機版本側邊購物車清單  -->
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent4">
+            <ul class="navbar-nav mr-auto  ">
+              <div class="d-block  d-lg-none navbarSupportedContent4" >
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="5"  class="border-top w-100">
+                  <tbody>
+                    <tr>
+                      <td width="20%"><img src="img/homebanner/index_h4@2x-100.jpg" class="img-fluid"></td>
+                      <td width="60%">台灣卡<br>
+                        三個月訂閱方案</td>
+                      <td width="20%">TWD 599 </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="border-top w-100">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td><p class="align-baseline pt-2"> 共 <span class="ml-1 mr-1 font-weight-bolder">5</span> 件商品 </p></td>
+                        <td><button class="btn btn-sm btn-primary m-3 homePopover-btn align-baseline" data-dismiss="popover-x"> 查看購物車 </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+          </div>
+          
+          <!--  --> 
+          
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 麵包屑位置引導 -->
+<div class="container ">
+  <nav >
+    <ol class="breadcrumb joinit-breadcrumb">
+      <li class="breadcrumb-item"><a href="#">首頁</a></li>
+      <li class="breadcrumb-item active" aria-current="page">訂閱條款</li>
+    </ol>
+  </nav>
+</div>
+<!-- 上方客製化選單 -->
+<div class="container ">
+  <ul class="navbar-nav card mb-4 box-shadow joinit-links ">
+    <li class="nav-item "> <a class="nav-link" href="#">特點</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">會員好禮</a> </li>
+    <li class="nav-item "> <a class="nav-link" href="#">回饋購物金</a> </li>
+    <li class="nav-item "> <a class="nav-link active" href="#">訂閱條款</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">隱私權保護政策</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">使用者條款</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">常見問題</a> </li>
+	  <!-- 20210604 修改 -->
+    <li class="nav-item"> <a class="nav-link" href="contactus.html">聯絡我們</a> </li>
+  </ul>
+</div>
+
+<!-- 訂閱服務說明  -->
+<div class="container ">
+  <div class="col-12">
+    <div class="blog-post ">
+      <div class="col-lg-10 col-sm-12 mx-auto">
+		  <!-- 以下文字內容 於 20210606 已經更新 -->
+        <h1 class="mb-5"> 訂閱服務說明 </h1>
+        <p class="font-weight-bolder mb-5"> 為保障會員使用本公司會員網路雲端平台系統暨APP應用服務(以下簡稱『本系統』)的會員付費訂閱服務，特別在此通知，當您於最後勾選「我同意」時，表示您已詳細閱讀、瞭解並同意接受下列所列之內容： </p>
+        <ol class="m-3 mb-5 joinit-post">
+          <li class="joinit-post-li"> 本系統使用的金流系統屬於第三方服務，如本系統註冊會員使用該金流服務進行專案購買或訂閱，即代表會員已先行詳閱並同意會員服務條款；會員因本系統而使用來自與本公司合作的第三方服務內容時，即表示也同意該金流服務的相關使用規範，若此第三方金流服務有任何效能、品質、付款…等問題，本公司對此不負任何擔保責任。</li>
+          <li> 本系統付費訂閱服務的有效期間，則是指會員依據其訂閱/購買方案付款完成後所得到的服務內容之期間。</li>
+          <li> 本系統提供不同的訂閱方案供會員訂閱，會員於本系統所訂閱之方案，係在遵守本公司會員服務條款下，於有效期間的會員享有會員專屬之相關優惠使用權，除非該訂閱方案另有約定外，訂閱者一經取消訂閱或違反本公司會員條款之規定，即無法再享有之前的訂閱會員優惠及福利。 </li>
+          <li> 信用卡訂閱制：本公司將於每月或定期自訂閱者自行設定之信用卡進行自動定期扣款，您即認知且明示同意以該付款方式定期支付您所選擇的訂閱服務費用，除您自行取消訂閱服務或由本公司終止您的會員帳號及服務外，訂閱者於定期扣款後，得享有訂閱方案會員之優惠使用權利。若訂閱者無進行續訂，則至前述有效期間屆滿即無法再使用會員之優惠。您也認知每一訂閱期間之方案內容或費用額度可能受到因公司促銷優惠、方案變更、或其他事項調整而有所不同，並授權本公司得因此向您收取相應的費用。 </li>
+          <li> 價格變動：本公司得自行決定於任何時候、以任何方式調整本服務或其中一部分之收費制度。例如：若以月訂閱制度之會員，任何收費價格的變動將於宣告後次月生效，除非本使用條款有明示其他之特別規定。</li>
+          <li> 取消訂閱：若您的服務方案適用自動定期付款之訂閱方案，您最晚須於系統自動更新訂閱期間即每月扣款   日前至少72小時前取消訂閱，以確保避免產生下一期帳單。請您特別了解，定期扣款之訂閱費用服務，一經付款成功完成，即表示完成訂閱並依原方案內容立即開通下一期間之服務，開通成功後無法申請退費，若會員是扣款週期開始後才取消訂閱，會員可使用至當次定期扣款的有效期間結束為止，會員不得主張未使用服務而要求將所付費用退款。 </li>
+          <li> 不予退款：本公司不提供退款服務，亦不就部分訂閱期間提供退費或折價方案之服務，當您取消訂閱本服務時，仍得於有效剩餘期間內使用原訂閱服務。於極例外之情況下(例如:當本系統服務因技術上遭遇困難而數日無法使用…等情況)，本公司得基於專屬裁量與判斷而提供受影響之會員消費折價或期間延長之補償。本公司得自行決定是否提供消費折價或期間延長之形式或額度，且該折價或期間延長服務屬一次性提供，任何人不得因此於未來相同或相異之情況下主張享受該權利。</li>
+          <li> 促銷：本公司將不定時提供促銷碼，包括與第三方合作提供之促銷方案。促銷碼得依照個別種類促銷之規定為一次性使用，不得兌換現金，並同時享有其他優惠，例如受本公司特定限制之免費試用。如您是經由第三方取得促銷碼，則可能有額外使用條件與限制。若您購買訂閱方案或以促銷碼兌換方案前，因促銷碼兌換方案得為即時生效類型，兌換方案有可能會覆蓋原本進行之方案，請您於兌換前再次確認您目前正在進行的訂閱方案，或確認其他方案的定期扣款已取消。 </li>
+        </ol>
+        <h4 class="text-right font-weight-bold mb-5"> 最後更新日期：2021年6月1日 </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer 頁底版型 -->
+<footer class="bd-footer bg-jonit py-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 col-xs-12"> <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap"> <img src="img/footer_logo@2x.png"  class="footr-logo"> </a>
+        <ul class="company-info">
+          <li class="mb-2">在一起管顧科技股份有限公司 </li>
+          <li class="mb-2">地址 高雄市苓雅區新光路38號32樓之3B</li>
+          <li class="mb-2">連絡電話 07-2691686</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-xs-12">
+        <div class="row justify-content-around">
+          <div class=" col-lg-4 col-xs-12">
+            <h5 class="footer-h5">認識在一起</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">關於我們</a></li>
+              <li class="mb-2"><a href="#">品牌故事</a></li>
+              <li class="mb-2"><a href="#">官方部落格</a></li>
+              <li class="mb-2"><a href="#">媒體報導</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">給旅客</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">特點</a></li>
+              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="#">回饋購物金</a></li>
+              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="#">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="#">使用者條款</a></li>
+              <li class="mb-2"><a href="#">常見問題</a></li>
+              <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">在一起合作夥伴</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">成為供應商</a></li>
+              <li class="mb-2"><a href="#">同業合作</a></li>
+              <li class="mb-2"><a href="#">聯盟行銷</a></li>
+              <li class="mb-2"><a href="#">人才招募</a></li>
+              <li class="mb-2"><a href="#">團體客製規劃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-copyright">COPYRIGHT © 2021 Joinit All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-better-nav.min.js"></script> 
+<script>
+        $(document).ready(function () {//手機選單js
+ $('.dropdown-toggle').dropdown();
+        });
+    </script> 
+<!-- bootstrap 常用模組 js 引入--> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- bootstrap 常用彈出模組 js 引入 --> 
+<script type="text/javascript" src="js/popper.min.js"></script> <script type="text/javascript" src="js/bootstrap-popover-x.js"></script>
+</body>
+</html>

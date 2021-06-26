@@ -1,0 +1,40 @@
+預覽登入
+帳號 guest
+密碼 12345678
+
+//////////////////////////
+
+更新檔案 zip 下載 
+http://2jc.co/20210602/update-ver-3-20210603-0902.zip
+
+//////////////////////////
+
+
+本次更新頁面
+//////////////////////////
+
+會員卡詳細頁
+http://2jc.co/20210602/card-detail.html
+
+首頁 未登入前
+ (修改內容 ： 活動類型下拉選單 + 最新優惠箭頭位置 )
+http://2jc.co/20210602/index.html
+
+首頁 登入後
+ ( 修改內容 ：  購物車清單 pc版/手機版 + 活動類型下拉選單 + 最新優惠箭頭位置  )
+http://2jc.co/20210602/index-login.html
+
+
+////////////////////
+
+本次更新檔案
+//////////////////////////
+card-detail.html
+index.html
+index-login.html
+
+js/bootstrap-better-nav.min.js
+js/bootstrap-popover-x.js
+
+css/bootstrap-popover-x
+css/style

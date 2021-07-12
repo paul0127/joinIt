@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-tw" />
+<title>會員服務條款</title>
+<!--bootstrap 4.6 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- 圖示字形引入 F.A.5.51-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header_info">
+        <div class="logo">
+          <a href="./"><img src="img/header_logo@2x.png" alt=""></a>
+        </div>
+        <!-- 如果需要搜尋就將 display:none 拿掉 -->
+        <div class="search">
+          <div class="back"><i class="fas fa-chevron-left"></i>搜尋</div>
+          <div class="search_con">
+            <div class="search_input">
+              <input type="text" placeholder="輸入目的地、景點、活動或關鍵字">
+              <div class="search_btn"><img src="img/icon_search-2.svg" alt=""></div>
+            </div>
+            <div class="list">
+              <div class="item">
+                <input type="checkbox" id="ch_01"><label for="ch_01">台灣</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_02"><label for="ch_02">峇里島</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_03"><label for="ch_03">日本</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_04"><label for="ch_04">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_05"><label for="ch_05">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_06"><label for="ch_06">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_07"><label for="ch_07">中國大陸</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_right">
+          <!-- 手機選單 -->
+          <div class="mobile_nav">
+            <div class="item mobile_search_btn"><img src="img/icon_search-2-w.svg"></div>
+            <div class="item mobile_menu_btn"><i class="fas fa-bars"></i></div>
+          </div>
+          <!-- 語系 -->
+          <div class="language">
+            <label for="">ENG</label>
+            <div class="back"><i class="fas fa-chevron-left"></i>請選擇瀏覽語系</div>
+            <ul>
+              <li class="active"><a href="#">English (Indonesia)</a></li>
+              <li><a href="#">日本語</a></li>
+              <li><a href="#">English (International)</a></li>
+              <li><a href="#">简体中文 (Malaysia)</a></li>
+              <li><a href="#">English (Philippines)</a></li>
+              <li><a href="#">简体中文</a></li>
+              <li><a href="#">English (Singapore)</a></li>
+              <li><a href="#">繁體中文</a></li>
+              <li><a href="#">Tiếng Việt</a></li>
+              <li><a href="#">繁體中文 (粵語)</a></li>
+              <li><a href="#">ไทย</a></li>
+              <li><a href="#">한국어</a></li>
+            </ul>
+          </div>
+          <!-- 購物車 -->
+          <div class="top_cart">
+            <label for=""><img src="img/icon_cart.svg" alt="">購物車</label>
+            <div class="top_cart_pop">
+              <div class="list">
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="total">共 5 件商品</div>
+                <a href="./payment-step1-for-business.html" class="to_cart">查看購物車</a>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <!-- 未登入 按鈕 如果需要使用將display:none 拿掉 -->
+            <label style="display: none;" data-toggle="modal" data-target="#login"><img src="img/icon_log.svg" alt="">登入/註冊</label>
+            <!-- 已登入頭像 如果需要使用將display:none 拿掉-->
+            <label><span class="avator" style="background-image: url(img/face.jpg);"></span></label>
+            
+            <!-- 彈出窗 -->
+            <div class="popup">
+              <!-- 未登入 選單 如果需要使用將底下註解拿掉-->
+              <!-- <div class="pop_info not_login" style="display: none;">
+                <div class="list">
+                  <a class="item"  data-toggle="modal" data-target="#login">
+                    <div class="icon i_login"></div>
+                    <div class="name">登入/註冊</div>
+                  </a>
+                  <a href="./payment-step1-for-business.html" class="item">
+                    <div class="icon i_cart"></div>
+                    <div class="name">購物車</div>
+                  </a>
+                </div>
+                <div class="language_btn">
+                  <a>ENG</a>
+                </div>
+              </div> -->
+              <!-- 已登入 選單 如果需要使用將底下註解拿掉-->
+              <div class="pop_info">
+                <a href="./member-center-profile-1.html" class="title">
+                  <div class="avator" style="background-image: url(img/face.jpg);"></div>
+                  <div class="name">Lee</div>
+                  <div class="operate">
+                    <i class="fas fa-cog"></i>
+                  </div>
+                </a>
+                <div class="list">
+                  <a href="./payment-step1-for-business.html" class="item pc_hide">
+                    <div class="icon i_cart"></div>
+                    <div class="name">購物車</div>
+                  </a>
+                  <a href="./member-center-card-pass-20210605.html" class="item">
+                    <div class="icon i_card"></div>
+                    <div class="name">我的會員卡禮遇</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_point"></div>
+                    <div class="name">我的點數</div>
+                  </a>
+                  <a href="./add-member-1.html" class="item pc_hide">
+                    <div class="icon i_add"></div>
+                    <div class="name">常用旅客</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_coupon"></div>
+                    <div class="name">折扣劵</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_order"></div>
+                    <div class="name">訂單管理</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_msg"></div>
+                    <div class="name">訊息管理</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_like"></div>
+                    <div class="name">我的收藏</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_qrcode"></div>
+                    <div class="name">產生Qr code</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_fb"></div>
+                    <div class="name">分享推薦碼到FB</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_line"></div>
+                    <div class="name">分享推薦碼到Line</div>
+                  </a>
+                </div>
+                <div class="logout_btn">
+                  <a href="#"><span class="i_logout"></span> 登出</a>
+                </div>
+                <div class="language_btn">
+                  <a>ENG</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- 麵包屑位置引導 -->
+<div class="container ">
+  <nav >
+    <ol class="breadcrumb joinit-breadcrumb">
+      <li class="breadcrumb-item"><a href="#">首頁</a></li>
+      <li class="breadcrumb-item active" aria-current="page">訂閱條款</li>
+    </ol>
+  </nav>
+</div>
+<!-- 上方客製化選單 -->
+<div class="container ">
+  <ul class="mb-4 joinit-links ">
+    <li class="nav-item "> <a class="nav-link" href="#">特點</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">會員好禮</a> </li>
+    <li class="nav-item "> <a class="nav-link" href="#">回饋購物金</a> </li>
+    <li class="nav-item "> <a class="nav-link" href="SubscriptionServices.html">訂閱條款</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="Privacy.html">隱私權保護政策</a> </li>
+    <li class="nav-item"> <a class="nav-link active" href="Terms.html">使用者條款</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">常見問題</a> </li>
+	  <!-- 20210604 修改 -->
+    <li class="nav-item"> <a class="nav-link" href="contactus.html">聯絡我們</a> </li>
+  </ul>
+</div>
+
+<!-- 訂閱服務說明  -->
+<div class="container ">
+  <div class="col-12">
+    <div class="blog-post ">
+      <div class="col-lg-10 col-sm-12 mx-auto">
+		  <!-- 以下文字內容 於 20210606 已經更新 -->
+        <h1 class="mb-5"> 會員服務條款 </h1>
+        <p class="font-weight-bolder mb-5"> 歡迎您加入本公司會員網路雲端平台系統暨APP應用服務(下稱「本系統」)之會員，當您註冊完成並開始使用本系統提供的各項服務時，即識別您已經詳細閱讀並了解與同意接受本公司之會員服務條款；若您未成年，應於加入/註冊會員前，將此會員服務條款讓您的法定代理人或監護者詳細閱讀並得到其同意，才可註冊/加入使用本系統服務，當您使用本系統服務時，也視為您已經得到您的法定代理人或監護者的仔細閱讀與了解，並同意會員條款之所有內容與其後內容之變更。</p>
+        <ul class="m-3 mb-5 joinit-post chinese_informal">
+          <li>
+            本會員服務條款對本公司的所有使用者/會員均有約束力。經註冊/購買/訂閱成為本公司使用者/會員之人，即同意接受本公司會員服務條款之約束。
+          </li>
+          <li> 申請入會之人須提交所需的個人資料。本公司保留絕對權利，拒絕接受任何會藉的申請，而毋須給予任何理由。
+          </li>
+          <li>申請人須提供真實而準確的詳細資料。本公司將不會處理任何不完整或不準確的表格。
+          </li>
+          <li>
+            行為不檢、詐騙、不當使用會員卡的利益或未能遵從本會規則將可導致其會藉被立即終止。本公司保留絕對權利(不論是否發出通知)終止任何會藉。本公司將不會承擔因此而引起的損失或損害。違規事項-暫停或取消會員資格，若會員有包括但不限於以下情形，本公司可以在任何時間立即而無需書面通知地以任何理由根據完全自行決定取消/停用會員之使用資格：
+            <ul>
+              <li>會員行為涉及違法或與法規和條例相牴觸。</li>
+              <li>會員行為干擾其他會員或行為影響到全體會員權利。</li>
+              <li>會員使用會員優惠價格私下從事代訂、代CI(非本人實際入住)、販售與賣房、轉讓營利…等違規行為。</li>
+              <li>會員假借本公司名義要求飯店升等套房，如以下舉例事項，並不限於：使用會員優惠價格訂房，或冒用本公司身分要求飯店給予升等或特殊待遇、或是要求減免飯店額外加床、額外/使用早餐等之服務費要求特別減免..等，如經查證屬實或經飯店反映，以上破壞本公司形象之違規行為。若發現會員有以上之違規行為，本公司得立即停卡終止會籍，並保留法律追訴權，並會提告求償本公司聲譽受損之權利損失。若您使用本系統服務因違反會員服務條款之因素而被終止或暫停時，本公司對您或是任何第三人均不負擔任何責任；您需自負因違反會員服務條款所生之法律責任外，對於本公司/關係企業、代理/受託人或其他相關輔助或履行人有權利損失或損害時(包括但不限於進行民事、刑事或行政程序導致訴訟費用支出與律師費)，應負關聯之賠償責任。本公司另保留絕對權利於任何時間，透過給予合理的通知，終止會藉之運作，而毋須給予任何理由。</li>
+            </ul>
+          </li>
+          <li>會員對本公司之組織、運作或管理無權參與，亦對本公司之任何財產無任何追訴權。</li>
+          <li>如欲查詢有關本公司的隱私權政策及處理方法，請參閱本公司的《隱私權條款》。</li>
+          <li>本公司保留所有優惠之最終決定權，各種特定優惠或服務條款若有變更或調整、提前終止…等情況，將不會主動通知會員，會員應主動造訪本服務網站，閱讀會員應遵守現行之最新《隱私權條款》、《會員服務條款》或其他應公告更新內容事項張貼於網站上，條款內容也會列出最近的修訂/更新日期，請會員主動瀏覽與查看。如在上述條款變更後會員仍繼續使用本方案內容者，則表示會員同意並接受以上之條款更新內容，如會員不同意，請勿繼續使用本網站及其服務。會員必須定期自行負責檢視本網站，確認以上條款是否有任何變更，並且仔細閱讀以上變更之內容。</li>
+          <li>除非您已閱讀並勾選下方選項，同意接受本會員服務條款，否則您無權使用本服務，無論您事實上是否有認真閱讀本會員服務條款，您在下方選項選取同意的行為或使用、註冊、登陸帳戶等行為皆視您已閱讀並同意本服務條款並受其約束。如您不同意此服務條款的內容，請立即離開並停止使用此服務。</li>
+          <li>電子文件表示方式說明：會員同意於使用本服務之任意交易的目的與意思皆以電子文件方式表示，若會員於各項服務瀏覽或功能頁面點選如同意或確認可依照其意義表示確認同意等功能鍵時，也如實視為表達會員正式確認與同意之表示。</li>
+          <li>本會員服務條款之解釋與適用，以中華民國法律為基準依據法；如因使用本服務與公司所生之爭議，同意在誠信原則下聯繫雙方討論或解決，若有訴訟之必要時，同意以台灣高雄地方法院為第一審管轄法院。
+            最後更新日期：2021年5月20日
+            </li>
+        </ul>
+        <h4 class="text-right font-weight-bold mb-5"> 最後更新日期：2021年6月1日 </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer 頁底版型 -->
+<footer class="bd-footer bg-jonit py-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 col-xs-12"> <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap"> <img src="img/footer_logo@2x.png"  class="footr-logo"> </a>
+        <ul class="company-info">
+          <li class="mb-2">在一起管顧科技股份有限公司 </li>
+          <li class="mb-2">地址 高雄市苓雅區新光路38號32樓之3B</li>
+          <li class="mb-2">連絡電話 07-2691686</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-xs-12">
+        <div class="row justify-content-around">
+          <div class=" col-lg-4 col-xs-12">
+            <h5 class="footer-h5">認識在一起</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">關於我們</a></li>
+              <li class="mb-2"><a href="#">品牌故事</a></li>
+              <li class="mb-2"><a href="#">官方部落格</a></li>
+              <li class="mb-2"><a href="#">媒體報導</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">給旅客</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">特點</a></li>
+              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="#">回饋購物金</a></li>
+              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="Privacy.html">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="Terms.html">使用者條款</a></li>
+              <li class="mb-2"><a href="#">常見問題</a></li>
+              <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">在一起合作夥伴</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">成為供應商</a></li>
+              <li class="mb-2"><a href="#">同業合作</a></li>
+              <li class="mb-2"><a href="#">聯盟行銷</a></li>
+              <li class="mb-2"><a href="#">人才招募</a></li>
+              <li class="mb-2"><a href="#">團體客製規劃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-copyright">COPYRIGHT © 2021 Joinit All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<!-- bootstrap 常用模組 js 引入--> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/alert_model.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

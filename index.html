@@ -6,138 +6,220 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="content-language" content="zh-tw" />
 <title>Join it</title>
-<!-- 請工程師注意  下方樣式表 請依序呼叫 不要次序改變 否則樣式表的覆寫會出錯 謝謝-->	
 <!--bootstrap 4.6 -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- 國碼模組樣式 -->	
 <link href="css/intlTelInput.css" rel="stylesheet" type="text/css">
-<!-- 主要樣式 -->
-<link rel="stylesheet" href="css/style.css">
-<!-- 手機側邊選單 -->
-<link href="css/bootstrap-better-nav.css" rel="stylesheet" type="text/css">
 <!-- 圖示字形引入 F.A.5.51-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-<link href="css/bootstrap-popover-x.css" media="all" rel="stylesheet" type="text/css" />
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!--20210609  顯示PC版語言選擇彈出選單 內容  -->
-  <div id="languagesPC" class="popover popover-x popover-default homePopover-box">
-    <div class="arrow"></div>
-    <div class="popover-body popover-content"> <span class="close" data-dismiss="popover-x">&times;</span>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tbody>
-          <tr>
-            <td><a href="#" >English (Indonesia)</a></td>
-            <td><a href="#" >日本語</a></td>
-          </tr>
-          <tr>
-            <td><a href="#" >English (International)</a></td>
-            <td><a href="#" >简体中文 (Malaysia)</a></td>
-          </tr>
-          <tr>
-            <td><a href="#" >English (Philippines)</a></td>
-            <td><a href="#" >简体中文</a></td>
-          </tr>
-          <tr>
-            <td><a href="#" >English (Singapore)</a></td>
-            <td><a href="#" >繁體中文</a></td>
-          </tr>
-          <tr>
-            <td><a href="#" >Tiếng Việt</a></td>
-            <td><a href="#" >繁體中文 (粵語)</a></td>
-          </tr>
-          <tr>
-            <td><a href="#" >ไทย</a></td>
-            <td><a href="#" >한국어</a></td>
-          </tr>
-          <tr> </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  
-  <!--20210609  顯示手機版語言選擇彈出選單 內容-->
-  <div class="modal fade " id="languagesmMobile" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
-    <div class="modal-dialog modal-dialog-centered full-screen" role="document" >
-      <div class="modal-content" style="background: none; border: none">
-        <div class="signin-container full-screen">
-          <div class="card-deck mb-3 text-center mt-3 full-screen" >
-            <div class="card mb-4 box-shadow full-scree">
-              <div class="card-body full-scree">
-                <button class="form-close" data-dismiss="modal"><span>×</span></button>
-                <ul class="languages-ul">
-                  <li ><a href="#" >繁體中文</a></li>
-                  <li ><a href="#" >한국어</a></li>
-                  <li ><a href="#" >简体中文</a></li>
-                  <li ><a href="#" >日本語</a></li>
-                  <li ><a href="#" >English (Indonesia)</a></li>
-                  <li ><a href="#" >English (International)</a></li>
-                  <li ><a href="#" >English (Philippines)</a></li>
-                  <li ><a href="#" >English (Singapore)</a></li>
-                  <li ><a href="#" >Tiếng Việt</a></li>
-                  <li ><a href="#" >ไทย</a></li>
-                </ul>
+  <header>
+    <div class="container">
+      <div class="header_info">
+        <div class="logo">
+          <a href="./"><img src="img/header_logo@2x.png" alt=""></a>
+        </div>
+        <!-- 如果需要搜尋就將 display:none 拿掉 -->
+        <div class="search" style="display: none;">
+          <div class="back"><i class="fas fa-chevron-left"></i>搜尋</div>
+          <div class="search_con">
+            <div class="search_input">
+              <input type="text" placeholder="輸入目的地、景點、活動或關鍵字">
+              <div class="search_btn"><img src="img/icon_search-2.svg" alt=""></div>
+            </div>
+            <div class="list">
+              <div class="item">
+                <input type="checkbox" id="ch_01"><label for="ch_01">台灣</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_02"><label for="ch_02">峇里島</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_03"><label for="ch_03">日本</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_04"><label for="ch_04">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_05"><label for="ch_05">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_06"><label for="ch_06">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_07"><label for="ch_07">中國大陸</label>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-<div id="Pageheader">
-  <!-- Page Heade NAV -->
-<div class="d-flex flex-md-row align-items-center p-3 px-md-4 bg-joinit-header border-bottom box-shadow fixed-top">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-2"><a class="navbar-brand" href="./"><img src="img/header_logo@2x.png" class="nav-logo"></a> </div>
-        <div class="col-6 d-none d-lg-block d-xs-none">
-			<!-- PC 版本 NAV 搜尋功能的彈跳推薦選項  -->
-          <div id="navsearch" class="popover popover-x popover-default homePopover-box">
-            <div class="arrow"></div>
-            <div class="popover-body popover-content">
-              <h4> 熱門目的地 </h4>
-              <ul class="popover-ul">
-                <li class="popover-content-li">
-                  <button class="popover-content-btn">高雄1</button>
-                </li>
-                <li class="popover-content-li ">
-                  <button class="popover-content-btn">台南</button>
-                </li>
-                <li class="popover-content-li ">
-                  <button class="popover-content-btn">南投</button>
-                </li>
-                <li class="popover-content-li ">
-                  <button class="popover-content-btn">台北</button>
-                </li>
-                <li class="popover-content-li ">
-                  <button class="popover-content-btn">香港</button>
-                </li>
-              </ul>
-              <button class="btn btn-sm btn-primary pull-right m-3 homePopover-btn" data-dismiss="popover-x"> 送出 </button>
+        <div class="header_right">
+          <!-- 手機選單 -->
+          <div class="mobile_nav">
+            <div class="item mobile_search_btn"><img src="img/icon_search-2-w.svg"></div>
+            <div class="item mobile_menu_btn" data-islogin="true"><i class="fas fa-bars"></i></div>
+          </div>
+          <!-- 語系 -->
+          <div class="language">
+            <label for="">ENG</label>
+            <div class="back"><i class="fas fa-chevron-left"></i>請選擇瀏覽語系</div>
+            <ul>
+              <li class="active"><a href="#">English (Indonesia)</a></li>
+              <li><a href="#">日本語</a></li>
+              <li><a href="#">English (International)</a></li>
+              <li><a href="#">简体中文 (Malaysia)</a></li>
+              <li><a href="#">English (Philippines)</a></li>
+              <li><a href="#">简体中文</a></li>
+              <li><a href="#">English (Singapore)</a></li>
+              <li><a href="#">繁體中文</a></li>
+              <li><a href="#">Tiếng Việt</a></li>
+              <li><a href="#">繁體中文 (粵語)</a></li>
+              <li><a href="#">ไทย</a></li>
+              <li><a href="#">한국어</a></li>
+            </ul>
+          </div>
+          <!-- 購物車 -->
+          <div class="top_cart">
+            <label for=""><img src="img/icon_cart.svg" alt="">購物車</label>
+            <div class="top_cart_pop">
+              <div class="list">
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="total">共 5 件商品</div>
+                <a href="./payment-step1-for-business.html" class="to_cart">查看購物車</a>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <!-- 未登入 按鈕 如果需要使用將display:none 拿掉 -->
+            <label data-toggle="modal" data-target="#login"><img src="img/icon_log.svg" alt="">登入/註冊</label>
+            <!-- 已登入頭像 如果需要使用將display:none 拿掉-->
+            <label style="display: none;"><span class="avator" style="background-image: url(img/face.jpg);"></span></label>
+            
+            <!-- 彈出窗 -->
+            <div class="popup">
+              <!-- 未登入 選單 如果需要使用將底下註解拿掉-->
+              <div class="pop_info not_login">
+                <div class="list">
+                  <a class="item"  data-toggle="modal" data-target="#login">
+                    <div class="icon i_login"></div>
+                    <div class="name">登入/註冊</div>
+                  </a>
+                  <a href="./payment-step1-for-business.html" class="item">
+                    <div class="icon i_cart"></div>
+                    <div class="name">購物車</div>
+                  </a>
+                </div>
+                <div class="language_btn">
+                  <a>ENG</a>
+                </div>
+              </div>
+              <!-- 已登入 選單 如果需要使用將底下註解拿掉-->
+              <!-- <div class="pop_info" style="display: none;">
+                <a href="#" class="title">
+                  <div class="avator" style="background-image: url(img/face.jpg);"></div>
+                  <div class="name">Lee</div>
+                  <div class="operate">
+                    <i class="fas fa-cog"></i>
+                  </div>
+                </a>
+                <div class="list">
+                  <a href="./payment-step1-for-business.html" class="item pc_hide">
+                    <div class="icon i_cart"></div>
+                    <div class="name">購物車</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_card"></div>
+                    <div class="name">我的會員卡禮遇</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_point"></div>
+                    <div class="name">我的點數</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_add"></div>
+                    <div class="name">常用旅客</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_coupon"></div>
+                    <div class="name">折扣劵</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_order"></div>
+                    <div class="name">訂單管理</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_msg"></div>
+                    <div class="name">訊息管理</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_like"></div>
+                    <div class="name">我的收藏</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_qrcode"></div>
+                    <div class="name">產生Qr code</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_fb"></div>
+                    <div class="name">分享推薦碼到FB</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_line"></div>
+                    <div class="name">分享推薦碼到Line</div>
+                  </a>
+                </div>
+                <div class="logout_btn">
+                  <a href="#"><span class="i_logout"></span> 登出</a>
+                </div>
+                <div class="language_btn">
+                  <a href="">ENG</a>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
-        <div class="col-4 ">
-          <nav class="navbar navbar-expand-lg navbar-dark navbar-nav-joinit ">
-            <button class="navbar-toggler navbar-toggler-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-				        <!-- 20210608 語言選擇 popover --> 
-                <!-- 顯示PC版語言選擇彈出選單 -->
-                <li class="nav-item d-lg-block d-md-none d-sm-none d-none"> <a class="nav-link lan-select" href="#" data-toggle="popover-x" data-target="#languagesPC" data-placement="bottom"  >ENG</a> </li>
-                <!-- 顯示手機版語言選擇彈出選單 -->
-                <li class="nav-item d-lg-none d-md-block d-sm-block "> <a class="nav-link lan-select languages-bt" href="#" data-toggle="modal" data-target="#languagesmMobile" >ENG</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#" data-toggle="modal" data-target="#login"  ><img src="img/icon_log.svg" class="navbar-img-svg"> 登入/註冊</a> </li>
-                <li class="nav-item "> <a class="nav-link" href="#"><img src="img/icon_cart.svg" class="navbar-img-svg"> 購物車</a> </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
       </div>
     </div>
-  </div>
+  </header>
   
   <!--帳戶登入 Modal -->
   <div class="modal fade " id="login" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true" >
@@ -157,7 +239,7 @@
                   <h5 class="h5 mt-5 mb-3 font-weight-bold text-left">在一起會員帳號登入</h5>
                   <div class="form-row mb-3">
                     <div class="col-12 ">
-                      <input id="phone1" type="tel" Placeholder="0912-123-123">
+                      <input id="phone1" type="tel" Placeholder="0912123123">
                     </div>
                   </div>
                   <input type="password" id="inputPassword" class="form-control" placeholder="密碼" >
@@ -199,7 +281,7 @@
                   </div>
                   <div class="mt-2 mb-2 custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="iagree">
-                    <label class="custom-control-label sub-text" for="iagree" data-toggle="modal" data-target="#iagreemodal" id="iagree-bt" >我已經詳閱並同意 <a target="_blank" href="#">使用者條款</a> 與 <a target="_blank" href="#">隱私權保護政策</a></label>
+                    <label class="custom-control-label sub-text" for="iagree">我已經詳閱並同意 <a target="_blank" href="./Terms.html">使用者條款</a> 與 <a target="_blank" href="./Privacy.html">隱私權保護政策</a></label>
                   </div>
                   <button class="btn btn-lg btn-block btn-login " type="button" id="reg-ok-bt" > 註冊</button>
                   <div class=" mt-3 mb-5"> <a href="#"  class="reg-link log-bt" > 會員登入 </a> </div>
@@ -214,7 +296,7 @@
             <div class="modal-content">
               <div class="modal-body text-center" >
                 <h4>尚未勾選同意</h4>
-                <p>請詳閱 <a href="#">使用者條款</a> 與 <a href="#">隱私權保護政策</a> </p>
+                <p>請詳閱 <a target="_blank" href="./Terms.html">使用者條款</a> 與 <a target="_blank" href="./Privacy.html">隱私權保護政策</a> </p>
                 <button type="button" class="btn btn-reg-warning" id="iagree-ok" >確認</button>
               </div>
             </div>
@@ -238,13 +320,13 @@
                     <div class="col-sm-12">
                       <h5 class="h5 font-weight-bold text-left mt3">系統已發送驗證碼至</h5>
                     </div>
-				    <div class="col-sm-12">
+				            <div class="col-sm-12">
                       <h5 class=" text-left">+886 ●●●●●1234</h5>
-				    </div>
-					  <!-- 20210606 新增  倒數計時功能顯示 並鎖定　重新發送按鈕, 詳細倒數功能設定　請工程師協助　 -->	
-					 <div class="col-sm-12"><p class="text-left" >重新發送驗證碼 (60s)  </p></div>
-                     <div class="col-sm-12"><button type="button" class="btn btn-nooutline reg-link" disabled > <span style="color: #FCB239" >重新發送驗證碼</span></button></div>
-					 <div class="col-sm-12"><button type="button" style="color: #FCB239"  class="btn btn-nooutline reg-link" ><span style="color: #FCB239" >重新發送驗證碼</span></button></div> 
+				            </div>
+					          <!-- 20210606 新增  倒數計時功能顯示 並鎖定　重新發送按鈕, 詳細倒數功能設定　請工程師協助　 -->	
+					          <div class="col-sm-12"><p class="text-left" >重新發送驗證碼 (60s)  </p></div>
+                    <div class="col-sm-12"><button type="button" class="btn btn-nooutline reg-link" disabled > <span style="color: #FCB239" >重新發送驗證碼</span></button></div>
+					          <div class="col-sm-12"><button type="button" style="color: #FCB239"  class="btn btn-nooutline reg-link" ><span style="color: #FCB239" >重新發送驗證碼</span></button></div> 
                   </div>
                   <div class="form-row mb-3">
                     <div class="col-sm-12">
@@ -289,7 +371,7 @@
                   <p class="sub-text mb-3  text-left"> 輸入您註冊時的手機號碼，系統將發送驗證碼，驗證碼核對正確可設定新密碼  </p>
                   <div class="form-row mb-3">
                     <div class="col-12 ">
-                      <input id="phone3" type="tel" Placeholder="0912-123-123">
+                      <input id="phone3" type="tel" Placeholder="0912123123">
                     </div>
                   </div>
                   <button class="btn btn-lg btn-block btn-login mb-3" type="button" id="forgetpasswd-sns-bt" >發送驗證碼</button>
@@ -311,10 +393,10 @@
           <div class="card-deck mb-3 text-center mt-3">
             <div class="card mb-4 box-shadow">
               <div class="card-body">
-				  <!-- 失敗訊息  請工程師依據判斷 替換內容 
-				  <h4 class="mt-3 mb-3">查無會員資料<br>請再次確認手機號碼</h4><button type="button" class="btn btn-reg-warning mb-3" data-dismiss="modal">確認</button>
-                  -->
-				  <!-- 成功 訊息-->
+                <!-- 失敗訊息  請工程師依據判斷 替換內容 
+                <h4 class="mt-3 mb-3">查無會員資料<br>請再次確認手機號碼</h4><button type="button" class="btn btn-reg-warning mb-3" data-dismiss="modal">確認</button>
+                        -->
+                <!-- 成功 訊息-->
                 <form class="form-signin">
                   <button class="form-close" data-dismiss="modal"><span>×</span></button>
                   <div class="form-row mb-1 mt-3">
@@ -382,15 +464,15 @@
       </div>
     </div>
   </div>
-</div>
 
 <!-- 僅首頁使用的 主要功能區 -->
 <div class="cover-container mx-auto flex-column header-cover">
-  <main role="main" class="inner cover text-center">
+  <div class="inner cover text-center">
     <div class="container">
       <div class="row m-0">
-        <div class="col-12 m-0 p-0">
-          <h2 class="cover-heading py-3 ">在一起探索國內外各種好吃、好玩的景點</h2>
+        <div class="col-12 mb-4 p-0">
+          <h2>在一起探索國內外各種好吃、好玩的景點</h2>
+          <h3>在一起探索國內外各種好吃、好玩的景點</h3>
         </div>
         <div class="col-md-4 m-0 p-0 justify-content-center">
           <input type="text" class="form-control"  placeholder="輸入關鍵字..." style="height: 48px;">
@@ -403,32 +485,29 @@
               <div class="arrow"></div>
               <div class="items">
                 <div class="item">
-                  <input type="checkbox" name="" id="台灣" value="台灣">
-                  <label for="台灣">台灣</label>
+                  <input type="checkbox" name="" id="c_1" value="台灣">
+                  <label for="c_1">台灣</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="峇里島" value="峇里島">
-                  <label for="峇里島">峇里島</label>
+                  <input type="checkbox" name="" id="c_2" value="峇里島">
+                  <label for="c_2">峇里島</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="日本" value="日本">
-                  <label for="日本">日本</label>
+                  <input type="checkbox" name="" id="c_3" value="日本">
+                  <label for="c_3">日本</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="中國大陸" value="中國大陸">
-                  <label for="中國大陸">中國大陸</label>
+                  <input type="checkbox" name="" id="c_4" value="中國大陸">
+                  <label for="c_4">中國大陸</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="中國大陸 香港" value="中國大陸 香港">
-                  <label for="中國大陸 香港">中國大陸 香港</label>
+                  <input type="checkbox" name="" id="c_5" value="中國大陸 香港">
+                  <label for="c_5">中國大陸 香港</label>
                 </div>
               </div>
               <div class="check_btn">確定</div>
             </div>
           </div>
-          
-			    <!--搜尋推薦小工具 觸發按鈕 -->
-          <!-- <button type="button" class="form-control topseatchbtn" data-toggle="popover-x" data-target="#TophomePopover" data-placement="bottom" >活動類型</button> -->
         </div>
         <div class="col-md-4 m-0 p-0 justify-content-center">
           <input type="text" class="form-control datetimepicker-input" id="datetimepicker" data-toggle="datetimepicker" data-target="#datetimepicker5" placeholder="出發日期..." style="height: 48px;"/>
@@ -440,7 +519,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </div>
 
 <div class="container"> 
@@ -539,28 +618,28 @@
       <div class="arrows" ><a class="arrow arrow-prev" ></a><a class="arrow arrow-next" ></a></div>
       <ul class="items">
         <li class="item">
-          <a href="#">
+          <a href="./card-detail.html">
             <div class="image" style="background: url('img/homebanner/index_h2@2x-100.jpg');" >
               <div class="name"><span> 5月用餐↘限時8折</span></div>
             </div>
           </a>
         </li>
         <li class="item">
-          <a href="#">
+          <a href="./card-detail.html">
             <div class="image" style="background: url('img/homebanner/index_h2@2x-100.jpg');" >
               <div class="name"><span> 5月用餐↘限時8折</span></div>
             </div>
           </a>
         </li>
         <li class="item">
-          <a href="#">
+          <a href="./card-detail.html">
             <div class="image" style="background: url('img/homebanner/index_h2@2x-100.jpg');" >
               <div class="name"><span> 5月用餐↘限時8折</span></div>
             </div>
           </a>
         </li>
         <li class="item">
-          <a href="#">
+          <a href="./card-detail.html">
             <div class="image" style="background: url('img/homebanner/index_h2@2x-100.jpg');" >
               <div class="name"><span> 5月用餐↘限時8折</span></div>
             </div>
@@ -577,107 +656,123 @@
       <div class="arrows"><a class="arrow arrow-prev"></a><a class="arrow arrow-next"></a></div>
       <ul class="items">
         <li class="item">
-          <div class="like"></div>
-          <a class="image" href="#"> <img src="img/1x/card_taiwan_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_taiwan_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#"> <img src="img/1x/card_asia_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_asia_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#"> <img src="img/1x/card_global_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_global_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#"> <img src="img/1x/card_vip_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_vip_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#"> <img src="img/1x/card_taiwan_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_taiwan_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#"> <img src="img/1x/card_asia_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_asia_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#"> <img src="img/1x/card_global_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like active"></div>
+            <a class="image" href="#"> <img src="img/1x/card_global_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like"></div>
-          <a class="image" href="#"> <img src="img/1x/card_vip_front.png" alt=""/> </a>
-          <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
-          <div class="bottom">
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          <div class="item_border">
+            <div class="like"></div>
+            <a class="image" href="#"> <img src="img/1x/card_vip_front.png" alt=""/> </a>
+            <div class="desc"><div class="name">台灣卡</div><div class="sub_name">即享台灣暢遊方案</div></div>
+            <div class="bottom">
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
       </ul>
@@ -691,79 +786,108 @@
       <div class="arrows"><a class="arrow arrow-prev"></a><a class="arrow arrow-next"></a></div>
       <ul class="items">
         <li class="item">
-          <div class="like"></div>
-          <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
-          <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
-          <div class="bottom">
-            <div class="location">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-              </svg>
-              台灣,高雄
+          <div class="item_border">
+            <div class="like"></div>
+            <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
+            <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
+            <div class="bottom">
+              <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                </svg>
+                台灣,高雄
+              </div>
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
-            </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
-          <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
-          <div class="bottom">
-            <div class="location">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-              </svg>
-              台灣,高雄
+          <div class="item_border">
+            <div class="like"></div>
+            <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
+            <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
+            <div class="bottom">
+              <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                </svg>
+                台灣,高雄
+              </div>
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
-            </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
-          <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
-          <div class="bottom">
-            <div class="location">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-              </svg>
-              台灣,高雄
+          <div class="item_border">
+            <div class="like"></div>
+            <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
+            <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
+            <div class="bottom">
+              <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                </svg>
+                台灣,高雄
+              </div>
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
-            </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
         <li class="item">
-          <div class="like active"></div>
-          <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
-          <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
-          <div class="bottom">
-            <div class="location">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-              </svg>
-              台灣,高雄
+          <div class="item_border">
+            <div class="like"></div>
+            <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
+            <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
+            <div class="bottom">
+              <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                </svg>
+                台灣,高雄
+              </div>
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="star">
-              <span class="num">4.5</span>
-              <img src="img/icon_star2.svg">
-              <span class="count">(2300)</span>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_border">
+            <div class="like"></div>
+            <a class="image" href="#" style="background-image: url(img/homebanner/index_h3@2x-100.jpg);"></a>
+            <div class="desc "><div class="name">豪華市景房</div><div class="sub_name">附早餐</div></div>
+            <div class="bottom">
+              <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                </svg>
+                台灣,高雄
+              </div>
+              <div class="star">
+                <span class="num">4.5</span>
+                <img src="img/icon_star2.svg">
+                <span class="count">(2300)</span>
+              </div>
+              <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
             </div>
-            <div class="price">TWD 1,299 <span class="origin_price">TWD 1,000</span></div>
           </div>
         </li>
       </ul>
@@ -907,8 +1031,8 @@
               <li class="mb-2"><a href="#">會員好禮</a></li>
               <li class="mb-2"><a href="#">回饋購物金</a></li>
               <li class="mb-2"><a href="#">訂閱條款</a></li>
-              <li class="mb-2"><a href="#">隱私權保護政策</a></li>
-              <li class="mb-2"><a href="#">使用者條款</a></li>
+              <li class="mb-2"><a href="Privacy.html">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="Terms.html">使用者條款</a></li>
               <li class="mb-2"><a href="#">常見問題</a></li>
               <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
             </ul>
@@ -934,15 +1058,12 @@
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/bootstrap-better-nav.min.js"></script> 
-<script>
-  $(document).ready(function () {//手機選單js
-    $('.dropdown-toggle').dropdown();
-  });
-</script> 
-<!-- bootstrap 常用模組 js 引入-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/alert_model.js"></script>
+<script src="./js/main.js"></script>
 <script>
   //搜尋小工具
   let search_inputs = document.querySelector('.header-cover .place')
@@ -961,6 +1082,12 @@
       }
     })
     search_pop.classList.toggle('active')
+  })
+
+  window.addEventListener('click',(event)=>{
+    if(event.target!==search_input && !search_pop.contains(event.target)){
+      search_pop.classList.remove('active')
+    }
   })
   search_pop_btn.addEventListener('click',()=>{
     let check_arr = Array.from(search_selects).filter(item=>item.checked)
@@ -1004,6 +1131,18 @@
 			})
     })
 
+    items.forEach(i=>{
+      i.addEventListener('touchstart',()=>{
+        i.classList.add('touched')
+      })
+      i.addEventListener('touchmove',()=>{
+        i.classList.add('touched')
+      })
+      i.addEventListener('touchend',()=>{
+        i.classList.remove('touched')
+      })
+    })
+
     //初始設定
     prevArrow.classList.add('disabled')
     if(box.scrollLeft==maxScrollWidth){
@@ -1022,25 +1161,18 @@
     })
   })
 </script> 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
-<!-- bootstrap date picker 日期選擇模組 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
 <script type="text/javascript">
     $(function () {
           $('#datetimepicker').datetimepicker({
           format: 'YYYY/MM/DD', // 日期選擇模組 顯示資料格式
-          // date: moment()
         });
     });
 </script> 
-<!-- bootstrap 常用彈出模組 js 引入 -->	
-<script type="text/javascript" src="js/bootstrap-popover-x.js"></script>
+
 <!--國碼+電話輸入特效-->	
 <script  src="js/intlTelInput.min.js"></script> 
 <!-- Vicky 要求新增的國碼+電話輸入特效 有3個地方需要個別引入-->
 <script>
-////////////////
 	
 	let telInput1 = $("#phone1")
 
@@ -1080,76 +1212,5 @@ telInput3.intlTelInput({
 	onlyCountries: ['tw','vn'],
 })
 	</script>
-	<!-- 登入 / 註冊 / 忘記密碼 相關的彈跳顯示設定 -->
-  <script type="text/javascript">
-    $(function() {
-			//
-      $('.reg-bt').on("click", function () {
-        $('#reg').modal();
-				$('#forgetpasswd-modal').modal('hide');
-				$('#forgetpasswd-sns').modal('hide');
-				$('#resetpasswd').modal('hide');
-				$('#forgetpasswd_ok').modal('hide');
-				$('#reg-ok').modal('hide');
-				$('#iagreemodal').modal('hide');
-				$('#reg-check').modal('hide');
-				$('#login').modal('hide');
-              
-            });
-			 $('#iagree-bt').on("click", function () {
-                $('#iagreemodal').modal();
-            });
-			$('#iagree-ok').on("click", function () {
-                $('#iagreemodal').modal("hide");
-				$('#reg').modal("hide");				
-            });
-			 $('#reg-ok-bt').on("click", function () {
-                $('#reg-ok').modal();
-            });
-			$('#reg-check-bt').on("click", function () {
-                $('#reg-check').modal();
-            });
-			
-			//
-			 $('#forgetpasswd-bt').on("click", function () {
-                $('#reg').modal('hide');
-				$('#forgetpasswd-modal').modal();
-				$('#forgetpasswd-sns').modal('hide');
-				$('#resetpasswd').modal('hide');
-				$('#forgetpasswd_ok').modal('hide');
-				$('#reg-ok').modal('hide');
-				$('#iagreemodal').modal('hide');
-				$('#reg-check').modal('hide');
-				$('#login').modal('hide');		
-				
-	        });
-			 $('#forgetpasswd-sns-bt').on("click", function () {
-                $('#forgetpasswd-sns').modal();
-	        });
-			 $('#forgetpasswd_ok-bt').on("click", function () {
-                $('#forgetpasswd_ok').modal();
-            });
-			$('#resetpasswd-bt').on("click", function () {
-                $('#resetpasswd').modal();
-            });
-			
-			$('#resetpasswd-success-bt').on("click", function () {
-                $('#resetpasswd-success').modal();
-            });
-			//
-			$('.log-bt').on("click", function () {
-				$('#reg').modal('hide');
-				$('#forgetpasswd-modal').modal('hide');
-				$('#forgetpasswd-sns').modal('hide');
-				$('#resetpasswd').modal('hide');
-				$('#forgetpasswd_ok').modal('hide');
-				$('#reg-ok').modal('hide');
-				$('#iagreemodal').modal('hide');
-				$('#reg-check').modal('hide');
-				$('#login').modal();	
-	        });
-			
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-tw" />
+<title>隱私權保護政策</title>
+<!--bootstrap 4.6 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- 圖示字形引入 F.A.5.51-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<!-- bootstrap date picker 日期選擇模組 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+<!-- 主要樣式 -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header_info">
+        <div class="logo">
+          <a href="./"><img src="img/header_logo@2x.png" alt=""></a>
+        </div>
+        <!-- 如果需要搜尋就將 display:none 拿掉 -->
+        <div class="search">
+          <div class="back"><i class="fas fa-chevron-left"></i>搜尋</div>
+          <div class="search_con">
+            <div class="search_input">
+              <input type="text" placeholder="輸入目的地、景點、活動或關鍵字">
+              <div class="search_btn"><img src="img/icon_search-2.svg" alt=""></div>
+            </div>
+            <div class="list">
+              <div class="item">
+                <input type="checkbox" id="ch_01"><label for="ch_01">台灣</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_02"><label for="ch_02">峇里島</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_03"><label for="ch_03">日本</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_04"><label for="ch_04">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_05"><label for="ch_05">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_06"><label for="ch_06">中國大陸</label>
+              </div>
+              <div class="item">
+                <input type="checkbox" id="ch_07"><label for="ch_07">中國大陸</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_right">
+          <!-- 手機選單 -->
+          <div class="mobile_nav">
+            <div class="item mobile_search_btn"><img src="img/icon_search-2-w.svg"></div>
+            <div class="item mobile_menu_btn"><i class="fas fa-bars"></i></div>
+          </div>
+          <!-- 語系 -->
+          <div class="language">
+            <label for="">ENG</label>
+            <div class="back"><i class="fas fa-chevron-left"></i>請選擇瀏覽語系</div>
+            <ul>
+              <li class="active"><a href="#">English (Indonesia)</a></li>
+              <li><a href="#">日本語</a></li>
+              <li><a href="#">English (International)</a></li>
+              <li><a href="#">简体中文 (Malaysia)</a></li>
+              <li><a href="#">English (Philippines)</a></li>
+              <li><a href="#">简体中文</a></li>
+              <li><a href="#">English (Singapore)</a></li>
+              <li><a href="#">繁體中文</a></li>
+              <li><a href="#">Tiếng Việt</a></li>
+              <li><a href="#">繁體中文 (粵語)</a></li>
+              <li><a href="#">ไทย</a></li>
+              <li><a href="#">한국어</a></li>
+            </ul>
+          </div>
+          <!-- 購物車 -->
+          <div class="top_cart">
+            <label for=""><img src="img/icon_cart.svg" alt="">購物車</label>
+            <div class="top_cart_pop">
+              <div class="list">
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image"><span style="background-image: url(img/homebanner/index_h4@2x-100.jpg);"></span></div>
+                  <div class="text">
+                    <div class="name">台灣卡</div>
+                    <div class="sub_name">三個月訂閱方案</div>
+                  </div>
+                  <div class="price">
+                    <div class="currency">TWD</div>
+                    <div class="num">599</div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="total">共 5 件商品</div>
+                <a href="./payment-step1-for-business.html" class="to_cart">查看購物車</a>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <!-- 未登入 按鈕 如果需要使用將display:none 拿掉 -->
+            <label style="display: none;" data-toggle="modal" data-target="#login"><img src="img/icon_log.svg" alt="">登入/註冊</label>
+            <!-- 已登入頭像 如果需要使用將display:none 拿掉-->
+            <label><span class="avator" style="background-image: url(img/face.jpg);"></span></label>
+            
+            <!-- 彈出窗 -->
+            <div class="popup">
+              <!-- 未登入 選單 如果需要使用將底下註解拿掉-->
+              <!-- <div class="pop_info not_login" style="display: none;">
+                <div class="list">
+                  <a class="item"  data-toggle="modal" data-target="#login">
+                    <div class="icon i_login"></div>
+                    <div class="name">登入/註冊</div>
+                  </a>
+                  <a href="./payment-step1-for-business.html" class="item">
+                    <div class="icon i_cart"></div>
+                    <div class="name">購物車</div>
+                  </a>
+                </div>
+                <div class="language_btn">
+                  <a>ENG</a>
+                </div>
+              </div> -->
+              <!-- 已登入 選單 如果需要使用將底下註解拿掉-->
+              <div class="pop_info">
+                <a href="./member-center-profile-1.html" class="title">
+                  <div class="avator" style="background-image: url(img/face.jpg);"></div>
+                  <div class="name">Lee</div>
+                  <div class="operate">
+                    <i class="fas fa-cog"></i>
+                  </div>
+                </a>
+                <div class="list">
+                  <a href="./payment-step1-for-business.html" class="item pc_hide">
+                    <div class="icon i_cart"></div>
+                    <div class="name">購物車</div>
+                  </a>
+                  <a href="./member-center-card-pass-20210605.html" class="item">
+                    <div class="icon i_card"></div>
+                    <div class="name">我的會員卡禮遇</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_point"></div>
+                    <div class="name">我的點數</div>
+                  </a>
+                  <a href="./add-member-1.html" class="item pc_hide">
+                    <div class="icon i_add"></div>
+                    <div class="name">常用旅客</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_coupon"></div>
+                    <div class="name">折扣劵</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_order"></div>
+                    <div class="name">訂單管理</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_msg"></div>
+                    <div class="name">訊息管理</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_like"></div>
+                    <div class="name">我的收藏</div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="icon i_qrcode"></div>
+                    <div class="name">產生Qr code</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_fb"></div>
+                    <div class="name">分享推薦碼到FB</div>
+                  </a>
+                  <a href="#" class="item pc_hide">
+                    <div class="icon i_line"></div>
+                    <div class="name">分享推薦碼到Line</div>
+                  </a>
+                </div>
+                <div class="logout_btn">
+                  <a href="#"><span class="i_logout"></span> 登出</a>
+                </div>
+                <div class="language_btn">
+                  <a>ENG</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- 麵包屑位置引導 -->
+<div class="container ">
+  <nav >
+    <ol class="breadcrumb joinit-breadcrumb">
+      <li class="breadcrumb-item"><a href="#">首頁</a></li>
+      <li class="breadcrumb-item active" aria-current="page">訂閱條款</li>
+    </ol>
+  </nav>
+</div>
+<!-- 上方客製化選單 -->
+<div class="container ">
+  <ul class="mb-4 joinit-links ">
+    <li class="nav-item "> <a class="nav-link" href="#">特點</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">會員好禮</a> </li>
+    <li class="nav-item "> <a class="nav-link" href="#">回饋購物金</a> </li>
+    <li class="nav-item "> <a class="nav-link" href="SubscriptionServices.html">訂閱條款</a> </li>
+    <li class="nav-item"> <a class="nav-link active" href="Privacy.html">隱私權保護政策</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="Terms.html">使用者條款</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="#">常見問題</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="contactus.html">聯絡我們</a> </li>
+  </ul>
+</div>
+
+<!-- 訂閱服務說明  -->
+<div class="container ">
+  <div class="col-12">
+    <div class="blog-post ">
+      <div class="col-lg-10 col-sm-12 mx-auto">
+		  <!-- 以下文字內容 於 20210606 已經更新 -->
+        <h1 class="mb-5"> 隱私權保護政策 </h1>
+        <p class="font-weight-bolder"> 蒐集個人資料告知事項 暨 個人資料提供同意書 </p>
+        <p class="mb-5"> 在一起管顧科技股份有限公司(下稱「本公司」)為遵守個人資料保護法令之規定，並保障使用本公司會員網路雲端平台系統暨APP應用服務(下稱「本系統」)會員之隱私權等權利，在向您蒐集個人資料前，依法向您告知下列事項，當您於最後勾選「我同意」時，表示您已閱讀、瞭解並同意接受下列內容： </p>
+        <ul class="m-3 mb-5 joinit-post chinese_informal">
+          <li>
+            蒐集目的及類別<br/>
+            本公司為提供活動各項通知服務、確認報名資料、寄送本會或產業活動相關訊息等行銷業務(含共同行銷)及電子方務服務之目的，以及會員管理、系統內部管理等資訊業務與資料庫管理、資通安全業務與管理、調查及統計研究分析之目的，而須獲取您下列個人資料類別，例如：姓名、性別、出生年月日、身分證統一編號、證照/護照號碼、電話號碼、相片、行動電話、通訊/戶籍地址、職稱、現職公司、電子郵件、FB/GOOGLE/LINE登入帳號…等，或其他得以直接或間接識別您個人之資料。
+          </li>
+          <li> 個人資料利用之期間、地區、對象及方式
+            <ul>
+              <li>期間：個人資料蒐集目的之存續期間或本公司因執行業務所必須之保存期間或依法令規定之保存年限，以前述期間較長者為準。</li>
+              <li>地區：本國、本公司及本公司所屬關聯企業所在地、與本公司有業務往來之機構營業處所所在地。</li>
+              <li>對象：本公司及本公司所屬關聯企業、本公司共同行銷或共同執行業務或交互運用客戶資料之公司之人、與本公司有業務往來之機構、其他依法有調查權之機關。</li>
+              <li>方式：以自動化機器及其他非自動化之方式。</li>
+            </ul>
+          </li>
+          <li>依法得行使下列權利及行使方式
+            <ul>
+              <li>依個人資料保護法之規定，您有下列權利：
+                <ul>
+                  <li>查詢或請求閱覽。</li>
+                  <li>請求製給複製本。</li>
+                  <li>請求補充或更正。</li>
+                  <li>請求停止蒐集、處理或利用。</li>
+                  <li>請求刪除。但因您不符申請程序、本公司執行業務或遵循法令所必須之情形，不在此限。</li>
+                </ul>
+              </li>
+              <li>前述權利之行使，您可透過本公司官方網站揭露之通訊方式與本公司聯繫，或至本公司填具申請文件。</li>
+            </ul>
+          </li>
+          <li>
+            不提供個人資料之權益影響<br/>
+            您得自由選擇是否提供相關個人資料，惟若您不提供或未提供正確之個人資料，本公司將無法為您提供蒐集目的之相關服務。
+          </li>
+          <li>
+            個人資料之安全<br/>
+            本公司會運用適當的安全技術和程序來保障您的資料，避免未經授權的存取、使用或披露。惟鑒於互聯網的性質，本公司不能保證資料傳輸是百分之百的可靠。但是本公司將採取所有實際、合理及可行的措施，確保由我們收集到的任何資料不受第三方的干擾。您必須清楚知道在網站上設有連結的其他網站可能會收集您的個人資料。您在加入並使用會員優惠計劃時亦須遵守有關的隱私權政策，本公司有機會提供您的個人資料予第三方包括服務合作供應商，而本公司亦不會承擔有關的任何責任。
+          </li>
+          <li>
+            特定目的外使用個人資料之個別同意條款<br/>
+            (本同意書並非強制條款，您請審慎考量後決定之，請於勾選「我同意」方式表達您的同意行為) 您同意本公司得為相關行銷業務(含共同行銷)、資訊業務與資料庫管理、資通安全業務與管理、電子商務服務及調查及統計與研究分析等目的，蒐集、處理、利用及國際傳輸申請人之個人資料，有關蒐集個人資料類別、個人資料利用之期間、地區、對象及方式等，均以本公司「蒐集個人資料告知事項」告知內容所載內容為限，並已得知個人資料保護法第3條規定之權益及不提供時之權益影響。
+          </li>
+          <li>
+            個人資料之同意提供
+            <ul>
+              <li>本人已充分獲知並瞭解上述告知事項。</li>
+              <li>本人同意貴公司於所列目的之必要範圍內，蒐集、處理及利用本人之個人資料，以及其他公務機關請求行政協助目的之提供。</li>
+              <li>本人瞭解此同意書符合個人資料保護法及相關法規之要求，並提供予此系統留存及日後查證使用。</li>
+            </ul>
+          </li>
+        </ul>
+        <h4 class="text-right font-weight-bold mb-5"> 最後更新日期：2021年6月1日 </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer 頁底版型 -->
+<footer class="bd-footer bg-jonit py-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-4 col-xs-12"> <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap"> <img src="img/footer_logo@2x.png"  class="footr-logo"> </a>
+        <ul class="company-info">
+          <li class="mb-2">在一起管顧科技股份有限公司 </li>
+          <li class="mb-2">地址 高雄市苓雅區新光路38號32樓之3B</li>
+          <li class="mb-2">連絡電話 07-2691686</li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-xs-12">
+        <div class="row justify-content-around">
+          <div class=" col-lg-4 col-xs-12">
+            <h5 class="footer-h5">認識在一起</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">關於我們</a></li>
+              <li class="mb-2"><a href="#">品牌故事</a></li>
+              <li class="mb-2"><a href="#">官方部落格</a></li>
+              <li class="mb-2"><a href="#">媒體報導</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">給旅客</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">特點</a></li>
+              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="#">回饋購物金</a></li>
+              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="Privacy.html">隱私權保護政策</a></li>
+              <li class="mb-2"><a href="Terms.html">使用者條款</a></li>
+              <li class="mb-2"><a href="#">常見問題</a></li>
+              <li class="mb-2"><a href="contactus.html">聯絡我們</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4  col-xs-12">
+            <h5 class="footer-h5">在一起合作夥伴</h5>
+            <ul class="footer-list-unstyled">
+              <li class="mb-2"><a href="#">成為供應商</a></li>
+              <li class="mb-2"><a href="#">同業合作</a></li>
+              <li class="mb-2"><a href="#">聯盟行銷</a></li>
+              <li class="mb-2"><a href="#">人才招募</a></li>
+              <li class="mb-2"><a href="#">團體客製規劃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-copyright">COPYRIGHT © 2021 Joinit All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<!-- bootstrap 常用模組 js 引入--> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/alert_model.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

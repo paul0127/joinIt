@@ -1141,7 +1141,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
 }
 
 /* 彈出窗設定 */
-.custom_alert{
+.custom_alert {
   padding: 15px !important;
 }
 .custom_alert .swal2-html-container {
@@ -1166,7 +1166,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   border-bottom: 1px solid #ccc;
   font-size: 20px;
 }
-.alert_comfirm .swal2-html-container span.red{
+.alert_comfirm .swal2-html-container span.red {
   color: #dc3545;
 }
 .alert_comfirm .swal2-actions {
@@ -1177,7 +1177,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
 .alert_submit .swal2-html-container {
   padding: 20px 60px;
 }
-.alert_submit .swal2-html-container span.red{
+.alert_submit .swal2-html-container span.red {
   color: #dc3545;
 }
 
@@ -1988,7 +1988,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
     padding-bottom: 10px;
   }
   .recent_history .outside .items .item {
-    min-width: 320px;
+    min-width: 340px;
   }
 }
 
@@ -2755,19 +2755,18 @@ ul.cardlist-pagination li a:hover:not(.active) {
 }
 .dashboard::before {
   content: '';
-  background-image: url(../img/dashboard/dashbroad_bg_mask.png);
+  height: 5.6%;
+  width: 100%;
   position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
   z-index: 5;
+  background-color: #cecece;
 }
 .dashboard .line_1 {
   position: absolute;
   bottom: 7%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   z-index: 2;
   width: 100%;
 }
@@ -2784,30 +2783,30 @@ ul.cardlist-pagination li a:hover:not(.active) {
   transition-duration: 0.5s;
   z-index: 1;
 }
-.dashboard .line_1 .line_icon {
+.dashboard .line_1 .line_block .icon{
   position: absolute;
-  bottom: 0%;
-  left: 0;
-  transform-origin: center bottom;
-  background-image: url(../img/dashboard/dashbroad_icon_1.png);
-  background-size: 100%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 50%;
-  display: block;
-  width: 100%;
-  transform: rotate(-175deg);
-  transform-origin: center bottom;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
-  z-index: 3;
+  bottom: 0;
+  right: 2%;
+  transform: translateY(50%);
+  width: 5%;
 }
+.dashboard .line_1 .line_block .icon img{
+  width: 100%;
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition-duration: .5s;
+}
+@media (max-width: 992px) {
+  .dashboard::before {
+    background-color: #c4c4c4;
+  }
+}
+
 
 .dashboard .line_2 {
   position: absolute;
   bottom: 7%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   transform-origin: center bottom;
   z-index: 2;
   width: 100%;
@@ -2825,31 +2824,24 @@ ul.cardlist-pagination li a:hover:not(.active) {
   transition-duration: 0.5s;
   z-index: 1;
 }
-.dashboard .line_2 .line_icon {
-  content: '';
+.dashboard .line_2 .line_block .icon{
   position: absolute;
   bottom: 0;
-  left: 0;
-  transform-origin: center bottom;
-  background-image: url(../img/dashboard/dashbroad_icon_2.png);
-  background-size: 100%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 50%;
-  display: block;
+  right: 8.5%;
+  transform: translateY(50%);
+  width: 5%;
+}
+.dashboard .line_2 .line_block .icon img{
   width: 100%;
-  transform: rotate(-175deg);
-  transform-origin: center bottom;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
-  z-index: 3;
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition-duration: .5s;
 }
 
 .dashboard .line_3 {
   position: absolute;
   bottom: 7%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   transform-origin: center bottom;
   z-index: 2;
   width: 100%;
@@ -2867,23 +2859,18 @@ ul.cardlist-pagination li a:hover:not(.active) {
   transition-duration: 0.5s;
   z-index: 1;
 }
-.dashboard .line_3 .line_icon {
-  content: '';
+.dashboard .line_3 .line_block .icon{
   position: absolute;
   bottom: 0;
-  left: 0;
-  background-image: url(../img/dashboard/dashbroad_icon_3.png);
-  background-size: 100%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 50%;
-  display: block;
+  right: 14.5%;
+  transform: translateY(50%);
+  width: 5%;
+}
+.dashboard .line_3 .line_block .icon img{
   width: 100%;
-  transform: rotate(-175deg);
-  transform-origin: center bottom;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
-  z-index: 3;
+  transform: rotate(180deg);
+  transform-origin: center;
+  transition-duration: .5s;
 }
 
 .btn-nooutline,
@@ -3206,7 +3193,7 @@ label.flipCard {
   font-size: 12px;
 }
 /*會員中心  左側選單*/
-.member-sidebar-item a{
+.member-sidebar-item a {
   display: flex;
   align-items: center;
   border: #cccccc 1px solid;
@@ -3227,14 +3214,14 @@ label.flipCard {
   color: #fff;
   cursor: pointer;
 }
-.member-sidebar-item a .aler-spot{
+.member-sidebar-item a .aler-spot {
   margin-left: auto;
 }
-.member-sidebar-item.singout a{
+.member-sidebar-item.singout a {
   border: none;
   color: #bbbbbb;
 }
-.member-sidebar-item.singout a:hover{
+.member-sidebar-item.singout a:hover {
   color: #fff;
 }
 .member-sidebar-item a .icon {
@@ -3619,7 +3606,6 @@ button.bg-light:hover {
   padding-left: 0;
 }
 
-
 .nav-search-icon {
   width: auto;
   height: 24px;
@@ -3873,8 +3859,6 @@ button.bg-light:hover {
 * {
   box-sizing: border-box;
 }
-
-
 
 /*愛心碼捐贈清單*/
 .donate_list {

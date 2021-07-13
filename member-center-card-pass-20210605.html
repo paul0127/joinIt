@@ -281,16 +281,19 @@
               <!--儀錶板-->
               <div class="dashboard">
                 <div class="line_1" data-num="0">
-                  <div class="line_block"></div>
-                  <div class="line_icon"></div>
+                  <div class="line_block">
+                    <div class="icon"><img src="./img/dashboard/icon_1.png" alt=""></div>
+                  </div>
                 </div>
-                <div class="line_2" data-num="0">
-                  <div class="line_block"></div>
-                  <div class="line_icon"></div>
+                <div class="line_2" data-num="50">
+                  <div class="line_block">
+                    <div class="icon"><img src="./img/dashboard/icon_2.png" alt=""></div>
+                  </div>
                 </div>
-                <div class="line_3" data-num="0">
-                  <div class="line_block"></div>
-                  <div class="line_icon"></div>
+                <div class="line_3" data-num="100">
+                  <div class="line_block">
+                    <div class="icon"><img src="./img/dashboard/icon_3.png" alt=""></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -892,9 +895,9 @@
             <h5 class="footer-h5">給旅客</h5>
             <ul class="footer-list-unstyled">
               <li class="mb-2"><a href="#">特點</a></li>
-              <li class="mb-2"><a href="#">會員好禮</a></li>
+              <li class="mb-2"><a href="./memberDiscount.html">會員好禮</a></li>
               <li class="mb-2"><a href="#">回饋購物金</a></li>
-              <li class="mb-2"><a href="#">訂閱條款</a></li>
+              <li class="mb-2"><a href="./SubscriptionServices.html">訂閱條款</a></li>
               <li class="mb-2"><a href="Privacy.html">隱私權保護政策</a></li>
               <li class="mb-2"><a href="Terms.html">使用者條款</a></li>
               <li class="mb-2"><a href="#">常見問題</a></li>
@@ -1131,48 +1134,28 @@
 <!-- 儀表板 -->
 <script>
   let line_1 = document.querySelector('.dashboard .line_1')
-  let num_1 = line_1.dataset.num
-  if(num_1>100){num_1 = 100}
-  if(num_1<0){num_1 = 0}
-  let line_block_1 = line_1.querySelector('.line_block')
-  let line_icon_1 = line_1.querySelector('.line_icon')
-  let start_1 = -178
-  let end_1 = -2
-  let deg_1 = start_1 + Math.abs((end_1-start_1)/100)*parseInt(num_1)
-  setTimeout(function () {
-    line_block_1.style.transform = 'rotate(' + deg_1 + 'deg)'
-    line_icon_1.style.transform = 'rotate(' + (deg_1+3) + 'deg)'
-  }, 100)
-
-
+  rotate_line(line_1)
   let line_2 = document.querySelector('.dashboard .line_2')
-  let num_2 = line_2.dataset.num
-  if(num_2>100){num_2 = 100}
-  if(num_2<0){num_2 = 0}
-  let line_block_2 = line_2.querySelector('.line_block')
-  let line_icon_2 = line_2.querySelector('.line_icon')
-  let start_2 = -178
-  let end_2 = -2
-  let deg_2 = start_2 + Math.abs((end_2-start_2)/100)*parseInt(num_2)
-  setTimeout(function () {
-    line_block_2.style.transform = 'rotate(' + deg_2 + 'deg)'
-    line_icon_2.style.transform = 'rotate(' + (deg_2+3) + 'deg)'
-  }, 100)
-
+  rotate_line(line_2)
   let line_3 = document.querySelector('.dashboard .line_3')
-  let num_3 = line_3.dataset.num
-  if(num_3>100){num_3 = 100}
-  if(num_3<0){num_3 = 0}
-  let line_block_3 = line_3.querySelector('.line_block')
-  let line_icon_3 = line_3.querySelector('.line_icon')
-  let start_3 = -178
-  let end_3 = -2
-  let deg_3 = start_3 + Math.abs((end_3-start_3)/100)*parseInt(num_3)
-  setTimeout(function () {
+  rotate_line(line_3)
 
-    line_block_3.style.transform = 'rotate(' + deg_3 + 'deg)'
-    line_icon_3.style.transform = 'rotate(' + (deg_3+3) + 'deg)'
-  }, 100)
+
+  function rotate_line(line){
+    let num = line.dataset.num
+    if(num>100){num = 100}
+    if(num<0){num = 0}
+    let line_block = line.querySelector('.line_block')
+    let line_icon = line.querySelector('.line_block .icon img')
+    let start = -178
+    let end = -2
+    let deg = start + Math.abs((end-start)/100)*parseInt(num)
+    let icon_deg = 180 - Math.abs((end-start)/100)*parseInt(num)
+    setTimeout(function () {
+      line_block.style.transform = 'rotate(' + deg + 'deg)'
+      line_icon.style.transform = 'rotate(' + icon_deg + 'deg)'
+    }, 100)
+  }
 </script>
 </body>
 </html>

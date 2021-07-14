@@ -1437,7 +1437,6 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  justify-content: space-between;
   position: relative;
   z-index: 2;
   list-style: none;
@@ -1544,7 +1543,6 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  justify-content: space-between;
   position: relative;
   z-index: 2;
   list-style: none;
@@ -1700,7 +1698,6 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  justify-content: space-between;
   position: relative;
   z-index: 2;
   list-style: none;
@@ -1858,7 +1855,6 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  justify-content: space-between;
   position: relative;
   z-index: 2;
   list-style: none;
@@ -4272,4 +4268,8 @@ button.bg-light:hover {
     display: inline-block;
     margin: 0 10px;
   }
+}
+
+.grecaptcha-badge {
+  display: none !important;
 }

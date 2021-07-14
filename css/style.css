@@ -7,6 +7,10 @@ body.fixed {
   overflow: hidden;
 }
 
+img,table{
+  max-width: 100%;
+}
+
 /*選單*/
 header {
   position: fixed;
@@ -1189,6 +1193,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   background-repeat: no-repeat;
   padding: 60px;
   width: 100% !important;
+  margin-bottom: 40px;
 }
 .header-cover .btn-join-search {
   background: transparent
@@ -1219,7 +1224,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 3;
   background-color: #fff;
   padding: 12px 12px;
   width: 275px;

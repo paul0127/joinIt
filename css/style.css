@@ -7,7 +7,8 @@ body.fixed {
   overflow: hidden;
 }
 
-img,table{
+img,
+table {
   max-width: 100%;
 }
 
@@ -1619,16 +1620,29 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
 .member_card .outside .items .item .item_border .desc .name {
   font-size: 24px;
   font-weight: 700;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .member_card .outside .items .item .item_border .desc .sub_name {
   font-size: 16px;
   color: #787878;
+  height: 72px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .member_card .outside .items .item .item_border .bottom {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  margin-top: 43px;
+  margin-top: 20px;
   padding: 0 10px 20px 10px;
+  height: 56px;
 }
 .member_card .outside .items .item .item_border .bottom .star {
   display: flex;
@@ -1771,16 +1785,28 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
 .hot_hotel .outside .items .item .item_border .desc .name {
   font-size: 24px;
   font-weight: 700;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .hot_hotel .outside .items .item .item_border .desc .sub_name {
   font-size: 16px;
   color: #787878;
+  height: 72px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .hot_hotel .outside .items .item .item_border .bottom {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
+  height: 56px;
   padding: 0 10px 20px 10px;
 }
 .hot_hotel .outside .items .item .item_border .bottom .location {
@@ -2784,25 +2810,24 @@ ul.cardlist-pagination li a:hover:not(.active) {
   transition-duration: 0.5s;
   z-index: 1;
 }
-.dashboard .line_1 .line_block .icon{
+.dashboard .line_1 .line_block .icon {
   position: absolute;
   bottom: 0;
   right: 2%;
   transform: translateY(50%);
   width: 5%;
 }
-.dashboard .line_1 .line_block .icon img{
+.dashboard .line_1 .line_block .icon img {
   width: 100%;
   transform: rotate(180deg);
   transform-origin: center;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 @media (max-width: 992px) {
   .dashboard::before {
     background-color: #c4c4c4;
   }
 }
-
 
 .dashboard .line_2 {
   position: absolute;
@@ -2825,18 +2850,18 @@ ul.cardlist-pagination li a:hover:not(.active) {
   transition-duration: 0.5s;
   z-index: 1;
 }
-.dashboard .line_2 .line_block .icon{
+.dashboard .line_2 .line_block .icon {
   position: absolute;
   bottom: 0;
   right: 8.5%;
   transform: translateY(50%);
   width: 5%;
 }
-.dashboard .line_2 .line_block .icon img{
+.dashboard .line_2 .line_block .icon img {
   width: 100%;
   transform: rotate(180deg);
   transform-origin: center;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .dashboard .line_3 {
@@ -2860,18 +2885,18 @@ ul.cardlist-pagination li a:hover:not(.active) {
   transition-duration: 0.5s;
   z-index: 1;
 }
-.dashboard .line_3 .line_block .icon{
+.dashboard .line_3 .line_block .icon {
   position: absolute;
   bottom: 0;
   right: 14.5%;
   transform: translateY(50%);
   width: 5%;
 }
-.dashboard .line_3 .line_block .icon img{
+.dashboard .line_3 .line_block .icon img {
   width: 100%;
   transform: rotate(180deg);
   transform-origin: center;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .btn-nooutline,

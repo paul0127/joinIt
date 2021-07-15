@@ -1291,8 +1291,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   cursor: pointer;
   margin-bottom: 0;
 }
-.header-cover .place .pop .items .item input[type='checkbox']:checked + label,
-.header-cover .place .pop .items .item label:hover {
+.header-cover .place .pop .items .item input[type='checkbox']:checked + label {
   color: #fff;
   background-color: #005ba5;
 }
@@ -2025,7 +2024,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   bottom: 25%;
   right: 0px;
   padding: 10px 20px;
-  z-index: 6;
+  z-index: 3;
   width: 250px;
 }
 
@@ -2806,8 +2805,8 @@ ul.cardlist-pagination li a:hover:not(.active) {
   display: block;
   transform: rotate(-178deg);
   transform-origin: center bottom;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
+  /* transition-timing-function: ease-in-out; */
+  transition-duration: 3s;
   z-index: 1;
 }
 .dashboard .line_1 .line_block .icon {
@@ -2821,7 +2820,7 @@ ul.cardlist-pagination li a:hover:not(.active) {
   width: 100%;
   transform: rotate(180deg);
   transform-origin: center;
-  transition-duration: 0.5s;
+  transition-duration: 3s;
 }
 @media (max-width: 992px) {
   .dashboard::before {
@@ -2846,8 +2845,8 @@ ul.cardlist-pagination li a:hover:not(.active) {
   display: block;
   transform: rotate(-178deg);
   transform-origin: center bottom;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
+  /* transition-timing-function: ease-in-out; */
+  transition-duration: 3s;
   z-index: 1;
 }
 .dashboard .line_2 .line_block .icon {
@@ -2861,7 +2860,7 @@ ul.cardlist-pagination li a:hover:not(.active) {
   width: 100%;
   transform: rotate(180deg);
   transform-origin: center;
-  transition-duration: 0.5s;
+  transition-duration: 3s;
 }
 
 .dashboard .line_3 {
@@ -2881,8 +2880,8 @@ ul.cardlist-pagination li a:hover:not(.active) {
   display: block;
   transform: rotate(-178deg);
   transform-origin: center bottom;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
+  /* transition-timing-function: ease-in-out; */
+  transition-duration: 3s;
   z-index: 1;
 }
 .dashboard .line_3 .line_block .icon {
@@ -2891,12 +2890,13 @@ ul.cardlist-pagination li a:hover:not(.active) {
   right: 14.5%;
   transform: translateY(50%);
   width: 5%;
+  
 }
 .dashboard .line_3 .line_block .icon img {
   width: 100%;
   transform: rotate(180deg);
   transform-origin: center;
-  transition-duration: 0.5s;
+  transition-duration: 3s;
 }
 
 .btn-nooutline,

@@ -239,7 +239,7 @@
                   <h5 class="h5 mt-5 mb-3 font-weight-bold text-left">在一起會員帳號登入</h5>
                   <div class="form-row mb-3">
                     <div class="col-12 ">
-                      <input id="phone1" type="tel" Placeholder="0912123123">
+                      <input id="phone1" type="tel" Placeholder="">
                     </div>
                   </div>
                   <input type="password" id="inputPassword" class="form-control" placeholder="密碼" >
@@ -478,34 +478,34 @@
           <input type="text" class="form-control"  placeholder="輸入關鍵字..." style="height: 48px;">
         </div>
         <div class="col-md-4 m-0 p-0 justify-content-center">
-          <div class="place">
-            <input type="text" class="form-control"  placeholder="活動類型" style="height: 48px;" readonly>
+          <div class="place" id="app">
+            <input type="text" class="form-control" v-model="search_arr"  placeholder="活動類型" style="height: 48px;" readonly @click="search_toggle = !search_toggle">
             <!-- 彈出小視窗 -->
-            <div class="pop">
+            <div class="pop" :class="{'active':search_toggle}">
               <div class="arrow"></div>
               <div class="items">
                 <div class="item">
-                  <input type="checkbox" name="" id="c_1" value="台灣">
+                  <input type="checkbox" name="" id="c_1" v-model="search_arr" value="台灣">
                   <label for="c_1">台灣</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="c_2" value="峇里島">
+                  <input type="checkbox" name="" id="c_2" v-model="search_arr" value="峇里島">
                   <label for="c_2">峇里島</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="c_3" value="日本">
+                  <input type="checkbox" name="" id="c_3" v-model="search_arr" value="日本">
                   <label for="c_3">日本</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="c_4" value="中國大陸">
+                  <input type="checkbox" name="" id="c_4" v-model="search_arr" value="中國大陸">
                   <label for="c_4">中國大陸</label>
                 </div>
                 <div class="item">
-                  <input type="checkbox" name="" id="c_5" value="中國大陸 香港">
+                  <input type="checkbox" name="" id="c_5" v-model="search_arr" value="中國大陸 香港">
                   <label for="c_5">中國大陸 香港</label>
                 </div>
               </div>
-              <div class="check_btn">確定</div>
+              <div class="check_btn" @click="search_toggle=false">確定</div>
             </div>
           </div>
         </div>
@@ -1062,41 +1062,61 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.18/vue.js' integrity='sha512-vAl/vSCnL+gHF3h2bGnUOWs0tlJCd6T0SoWoKrMrE9dQmLEBVnYP5celRncFwGQXdWfK0mZMo/zAX5dZRG53Ow==' crossorigin='anonymous'></script>
 <script src="./js/alert_model.js"></script>
 <script src="./js/main.js"></script>
 <script>
   //搜尋小工具
-  let search_inputs = document.querySelector('.header-cover .place')
-  let search_input = search_inputs.querySelector('input')
-  let search_pop = search_inputs.querySelector('.pop')
-  let search_pop_btn = search_pop.querySelector('.check_btn')
-  let search_selects = search_pop.querySelectorAll('.items .item input[type="checkbox"]')
-  search_input.addEventListener('click',()=>{
-    let input = search_input.value
-    let arr = input.split(',')
-    search_selects.forEach(item=>{
-      if(arr.includes(item.value)){
-        item.checked = true
-      }else{
-        item.checked = false
-      }
-    })
-    search_pop.classList.toggle('active')
-  })
+  // let search_inputs = document.querySelector('.header-cover .place')
+  // let search_input = search_inputs.querySelector('input')
+  // let search_pop = search_inputs.querySelector('.pop')
+  // let search_pop_btn = search_pop.querySelector('.check_btn')
+  // let search_selects = search_pop.querySelectorAll('.items .item input[type="checkbox"]')
+  // search_input.addEventListener('click',()=>{
+  //   let input = search_input.value
+  //   let arr = input.split(',')
+  //   search_selects.forEach(item=>{
+  //     if(arr.includes(item.value)){
+  //       item.checked = true
+  //     }else{
+  //       item.checked = false
+  //     }
+  //   })
+  //   search_pop.classList.toggle('active')
+  // })
 
-  window.addEventListener('click',(event)=>{
-    if(event.target!==search_input && !search_pop.contains(event.target)){
-      search_pop.classList.remove('active')
+  // window.addEventListener('click',(event)=>{
+  //   if(event.target!==search_input && !search_pop.contains(event.target)){
+  //     search_pop.classList.remove('active')
+  //   }
+  // })
+  // search_pop_btn.addEventListener('click',()=>{
+  //   let check_arr = Array.from(search_selects).filter(item=>item.checked)
+  //   let arr = []
+  //   check_arr.forEach(item=>{
+  //     arr.push(item.value)
+  //   })
+  //   search_input.value = arr
+  //   search_pop.classList.remove('active')
+  // })
+
+  let app = new Vue({
+    el:'#app',
+    data(){
+      return {
+        search_toggle:false,
+        search_arr:[]
+      }
+    },
+    mounted(){
+      window.addEventListener('click',(event)=>{
+        let search_input = document.querySelector('.header-cover .place input')
+        let search_pop = document.querySelector('.header-cover .place .pop')
+        if(event.target!==search_input && !search_pop.contains(event.target)){
+          this.search_toggle = false
+        }
+      })
     }
-  })
-  search_pop_btn.addEventListener('click',()=>{
-    let check_arr = Array.from(search_selects).filter(item=>item.checked)
-    let arr = []
-    check_arr.forEach(item=>{
-      arr.push(item.value)
-    })
-    search_input.value = arr
-    search_pop.classList.remove('active')
   })
 
   // 首頁所有輪播
@@ -1181,7 +1201,7 @@ telInput1.intlTelInput({
     initialCountry: 'tw',
     separateDialCode:'false',
     
-    autoPlaceholder: '',
+    autoPlaceholder: 'polite',
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/utils.js",
 	onlyCountries: ['tw','vn'],
 })

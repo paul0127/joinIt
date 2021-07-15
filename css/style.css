@@ -2890,7 +2890,6 @@ ul.cardlist-pagination li a:hover:not(.active) {
   right: 14.5%;
   transform: translateY(50%);
   width: 5%;
-  
 }
 .dashboard .line_3 .line_block .icon img {
   width: 100%;
@@ -2978,75 +2977,112 @@ ul.cardlist-pagination li a:hover:not(.active) {
     padding: 0 !important;
   }
 }
-/**/
+
+/*卡片翻轉*/
 .modal-dialog-350 {
   max-width: 350px !important;
   margin: 0 auto;
 }
-.card-container {
-  display: grid;
-  perspective: 700px;
-  position: relative;
+.card_container {
   width: 100%;
 }
-.card-flip.photo {
+.card_container .card_con {
+  width: 100%;
+  padding-bottom: 64%;
+  transform-style: preserve-3d;
+  transform: translateZ(1000px) rotateY(0deg);
+  transition-duration: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+.card_container .card_con.active {
+  transform: translateZ(1000px) rotateY(-180deg);
+}
+.card_container .card_con.active .card_front {
+  z-index: 0;
+}
+.card_container .card_con.active .card_back {
+  z-index: 1;
+}
+/*卡片正片*/
+.card_container .card_con .card_front {
+  padding-bottom: 64%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  z-index: 1;
+  transform: rotateY(0deg);
+  transform-origin: center;
+  transition-duration: 0.3s;
+}
+.card_container .card_con .card_front .card_block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.card_container .card_con .card_front .card_block .text {
+  color: #fff;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+/* 卡片背面 */
+.card_container .card_con .card_back {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 5px;
+  transform: rotateY(-180deg);
+  transform-origin: center;
+  transition-duration: 0.3s;
+}
+.card_container .card_con .card_back .card_block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card_container .card_con .card_back .card_block .photo {
   width: 75px;
   height: 75px;
+  margin-right: 40px;
 }
-.card-flip {
-  display: grid;
-  grid-template: 1fr / 1fr;
-  grid-template-areas: 'frontAndBack';
-  transform-style: preserve-3d;
-  transition: all 0.7s ease;
-  box-shadow: 2px 2px 16px #333;
-  margin: -10px; /**/
-  border-radius: 10px;
-  width: 350px;
-  height: 223px;
-}
-.card-text {
+.card_container .card_con .card_back .card_block .text {
+  flex: 1;
+  color: #fff;
+  margin-top: -20px;
   font-size: 14px;
+  line-height: 1.5;
+}
+.card_container .card_con .card_back .card_block .bottom {
+  flex: 0 0 100%;
   color: #fff;
-  margin: 0px;
-  text-align: left;
+  font-size: 12px;
+  margin-top: 2px;
 }
-.card-title {
-  font-size: 16px;
-  color: #fff;
-  text-align: right;
-  font-weight: 800;
+
+.card_container .btn {
+  width: 100%;
 }
-.card-flip-front {
-  width: 350px;
-  height: 223px;
-  grid-area: frontAndBack;
-  margin-left: 0px; /**/
-}
-.card-flip-back {
-  grid-area: frontAndBack;
-  transform: rotateY(-180deg);
-  margin-left: 0px; /**/
-}
-#flipCard:checked + .card-flip,
-#flipCard2:checked + .card-flip,
-#flipCard3:checked + .card-flip,
-#flipCard4:checked + .card-flip {
-  transform: rotateY(180deg);
-}
-label.flipCard {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 350px;
-  height: 223px;
-  cursor: pointer;
-  z-index: 9999;
-}
-/*2021605 工程師要求 將卡片路徑寫入html中 */
-.card-flip .card {
-  background: #000;
-  padding: 2px;
+@media (max-width: 992px) {
+  .card_container .card_con.active {
+    transform: unset;
+    transition-duration: unset;
+  }
+  .card_container .card_con .card_back {
+    transform: rotateY(0deg);
+  }
 }
 
 /**/

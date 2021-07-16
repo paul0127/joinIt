@@ -11,6 +11,10 @@ img,
 table {
   max-width: 100%;
 }
+table .td,table .th{
+  border: 1px solid #333;
+  padding: 5px;
+}
 
 /*選單*/
 header {
@@ -2272,6 +2276,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
 .card-detail-sidebar-item.active a {
   color: #005ba5;
   border-left: solid 3px #005ba5;
+  cursor: pointer;
 }
 
 .card-detail-nav-item a {
@@ -2287,6 +2292,7 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
 .card-detail-nav-item.active a {
   color: #005ba5;
   border-bottom: solid 3px #005ba5;
+  cursor: pointer;
 }
 .card-detail-nav {
   overflow: hidden;
@@ -3647,6 +3653,7 @@ button.bg-light:hover {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 60px;
+  height: 250px;
 }
 .footer-cover .btn-join {
   background: transparent

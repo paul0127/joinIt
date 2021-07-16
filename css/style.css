@@ -1697,6 +1697,12 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   .member_card .outside .items .item.touched .item_border {
     transform: scale(0.95);
   }
+  .member_card .outside .items .item .item_border .like:hover::after {
+    background-image: url(../img/icon_like1.svg);
+  }
+  .member_card .outside .items .item .item_border .like.active:hover::after {
+    background-image: url(../img/icon_like2.svg);
+  }
 }
 /**/
 
@@ -1867,6 +1873,12 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   .hot_hotel .outside .items .item.touched .item_border {
     transform: scale(0.95);
   }
+  .hot_hotel .outside .items .item .item_border .like:hover::after {
+    background-image: url(../img/icon_like1.svg);
+  }
+  .hot_hotel .outside .items .item .item_border .like.active:hover::after {
+    background-image: url(../img/icon_like2.svg);
+  }
 }
 
 /*首頁最近瀏覽*/
@@ -2019,6 +2031,12 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   }
   .recent_history .outside .items .item {
     min-width: 340px;
+  }
+  .recent_history .outside .items .item_border .like:hover::after {
+    background-image: url(../img/icon_like1.svg);
+  }
+  .recent_history .outside .items .item_border .like.active:hover::after {
+    background-image: url(../img/icon_like2.svg);
   }
 }
 

@@ -2141,7 +2141,10 @@ header .header_info .header_right .login .popup .pop_info .language_btn {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   overflow-y: auto;
-  z-index: 99999999;
+  z-index: 99;
+}
+.modal-backdrop{
+  z-index: 98;
 }
 .modal.container {
   max-width: none;
